@@ -1,3 +1,5 @@
-$.getJSON("quotes_final.json", function(json) {
-    console.log(json); 
+$(document).ready(function(){
+    $.getJSON("quotes_final.json", function(json) {
+            console.log(json); 
+        })
 });
