@@ -3,7 +3,7 @@ $(document).ready(function() {
         let quoteIndex = Math.floor(Math.random() * (json.length));
         console.log(json[quoteIndex]);
 
-        $(".full-quote").html(json[quoteIndex].quote);
+        $(".full-quote").html(json[quoteIndex].quote.fullQuote);
         $(".author").html(json[quoteIndex].author);
     })
 });
