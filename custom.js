@@ -4,6 +4,6 @@ $(document).ready(function() {
         console.log(json[quoteIndex]);
 
         $(".full-quote").html(json[quoteIndex].fullQuote);
-        $(".author").html(json[quoteIndex].fullQuote);
+        $(".author").html(json[quoteIndex].author);
     })
 });
