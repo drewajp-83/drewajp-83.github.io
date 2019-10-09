@@ -6,6 +6,8 @@ $(document).ready(function() {
         //loop through object to get nested values
         for (let i = 0; i < json.length; i++) {
             let beginningQuoteIndex = Math.floor(Math.random() * (json[i].quote.beginningQuote.length));
+            let middleQuoteIndex = Math.floor(Math.random() * (json[i].quote.middleQuote.length));
+            let endQuoteIndex = Math.floor(Math.random() * (json[i].quote.endQuote.length));
             console.log(beginningQuoteIndex);
         }
 
