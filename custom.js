@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $.getJSON("quotes_final.json", function(json) {
-        console.log(json[0].quote);
+        const quoteData = json;
+        console.log(json[quoteData].quote);
         let quoteIndex = Math.floor(Math.random() * (json.length));
 
         $(".full-quote").html(json[quoteIndex].quote.fullQuote);
