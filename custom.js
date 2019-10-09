@@ -16,6 +16,6 @@
           $(".full-quote").html(json[quoteIndex].quote.fullQuote);
           $(".author").html(json[quoteIndex].author);
           $(".quote-fragments").html(json[beginningQuoteIndex].quote.beginningQuote + " " +
-              json[middleQuoteIndex].quote.middleQuote + " " + json[endQuoteIndex].quote.endQuote)
+              json[middleQuoteIndex].quote.middleQuote + " " + json[endQuoteIndex].quote.endQuote);
       })
   });
