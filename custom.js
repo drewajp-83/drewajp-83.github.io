@@ -7,10 +7,6 @@
           let beginningQuoteIndex = Math.floor(Math.random() * (json.length));
           let middleQuoteIndex = Math.floor(Math.random() * (json.length));
           let endQuoteIndex = Math.floor(Math.random() * (json.length));
-          console.log(quoteIndex);
-          console.log(beginningQuoteIndex);
-          console.log(middleQuoteIndex);
-          console.log(endQuoteIndex);
 
           //output
           $(".full-quote").html(json[quoteIndex].quote.fullQuote);
