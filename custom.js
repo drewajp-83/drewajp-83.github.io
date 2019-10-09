@@ -4,10 +4,9 @@ $(document).ready(function() {
         let quoteIndex = Math.floor(Math.random() * (json.length));
 
         //loop through object to get nested values
-        let nestedValues = json;
-
-        for (let i = 0; i < nestedValues.length; i++) {
-            console.log(nestedValues[i]);
+        for (let i = 0; i < json.length; i++) {
+            let beginningQuoteIndex = Math.floor(Math.random() * (json[i].quote.beginningQuote.length));
+            console.log(beginningQuoteIndex);
         }
 
         //output
