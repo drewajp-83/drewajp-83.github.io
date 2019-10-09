@@ -3,14 +3,15 @@ $(document).ready(function() {
         //obtains array value to generate random full quote
         let quoteIndex = Math.floor(Math.random() * (json.length));
 
-        //loop through object to get nested values
-        for (let i = 0; i < json.length; i++) {
-            let beginningQuoteIndex = Math.floor(Math.random() * (json[i].quote.beginningQuote.length));
-            let middleQuoteIndex = Math.floor(Math.random() * (json[i].quote.middleQuote.length));
-            let endQuoteIndex = Math.floor(Math.random() * (json[i].quote.endQuote.length));
-            console.log(beginningQuoteIndex);
-        }
-
+        //generate random number for each quote fragment
+        let beginningQuoteIndex = Math.floor(Math.random() * (json.length));
+        let middleQuoteIndex = Math.floor(Math.random() * (json.length));
+        let endQuoteIndex = Math.Math.floor(Math.random() * (json.length));
+        console.log(quoteIndex);
+        console.log(beginningQuoteIndex);
+        console.log(middleQuoteIndex);
+        console.log(endQuoteIndex);
+        
         //output
         $(".full-quote").html(json[quoteIndex].quote.fullQuote);
         $(".author").html(json[quoteIndex].author);
