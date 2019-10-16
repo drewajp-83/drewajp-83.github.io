@@ -28,7 +28,7 @@ $(document).ready(function() {
         return fullQuote;
 
         //create dropdown for fullquote or mixed quote selection. Wrap outputs for each instance in functions and call on selection
-         $(".original-quote").click(function() {
+         $(".original-quote").click(function originalQuote() {
             $(".full-quote").html(fullQuote);
         });
         //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
