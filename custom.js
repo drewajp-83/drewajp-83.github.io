@@ -1,5 +1,6 @@
   $(document).ready(function() {
       $.getJSON("quotes_final.json", function(json) {
+          
           function completeQuote() {
               //obtains random array number to generate random full quote
               let quoteIndex = Math.floor(Math.random() * (json.length));
