@@ -11,15 +11,11 @@ $(document).ready(function() {
         const middleQuoteIndex = Math.floor(Math.random() * (json.length));
         const endQuoteIndex = Math.floor(Math.random() * (json.length));
             
-        fullQuote = $(".full-quote").html(json[quoteIndex].quote.fullQuote);
-        author = $(".author").html(json[quoteIndex].author);
-        
-        fragmentedQuote = $(".quote-fragments").html(json[beginningQuoteIndex].quote.beginningQuote + " " +
-        json[middleQuoteIndex].quote.middleQuote + " " + json[endQuoteIndex].quote.endQuote);
+        fullQuote = (json[quoteIndex].quote.fullQuote);
+        author = (json[quoteIndex].author);
         
         console.log(fullQuote);
         console.log(author);
-        console.log(fragmentedQuote);
 
         //create dropdown for fullquote or mixed quote selection. Wrap outputs for each instance in functions and call on selection
 
