@@ -20,7 +20,7 @@
 
           //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
 
-          //event listener to denerate quotes
+          //event listener to generate quotes
 
           //event listener to clear quotes
 
