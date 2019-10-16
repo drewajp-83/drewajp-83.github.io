@@ -1,5 +1,11 @@
   $(document).ready(function() {
       $.getJSON("quotes_final.json", function(json) {
+        
+              //global
+              let fullQuote = "";
+              let randomQuote = "";
+              let author = "";
+          
               //obtains random array number to generate random full quote
               const quoteIndex = Math.floor(Math.random() * (json.length));
               
@@ -7,8 +13,6 @@
               const beginningQuoteIndex = Math.floor(Math.random() * (json.length));
               const middleQuoteIndex = Math.floor(Math.random() * (json.length));
               const endQuoteIndex = Math.floor(Math.random() * (json.length));
-              $(".quote-fragments").html(json[beginningQuoteIndex].quote.beginningQuote + " " +
-              json[middleQuoteIndex].quote.middleQuote + " " + json[endQuoteIndex].quote.endQuote);
         
           //output
               $(".full-quote").html(json[quoteIndex].quote.fullQuote);
