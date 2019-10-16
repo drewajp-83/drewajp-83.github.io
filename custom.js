@@ -10,9 +10,15 @@ $(document).ready(function() {
         const beginningQuoteIndex = Math.floor(Math.random() * (json.length));
         const middleQuoteIndex = Math.floor(Math.random() * (json.length));
         const endQuoteIndex = Math.floor(Math.random() * (json.length));
+        
+        //fragmented quote variables
+        let beginningQuote = json[beginningQuoteIndex].quote.beginningQuote;
+        let middleQuote = json[middleQuoteIndex].quote.middleQuote;
+        let endQuote = json[endQuoteIndex].quote.endQuote;
             
-        fullQuote = (json[quoteIndex].quote.fullQuote);
-        author = (json[quoteIndex].author);
+        fullQuote = json[quoteIndex].quote.fullQuote;
+        author = json[quoteIndex].author;
+        
         
         console.log(fullQuote);
         console.log(author);
