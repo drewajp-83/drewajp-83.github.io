@@ -4,6 +4,7 @@
               //obtains random array number to generate random full quote
               const quoteIndex = Math.floor(Math.random() * (json.length));
               $(".full-quote").html(json[quoteIndex].quote.fullQuote);
+              $(".author").html(json[quoteIndex].author);
           };
 
           function randomQuote() {
@@ -11,8 +12,6 @@
               const beginningQuoteIndex = Math.floor(Math.random() * (json.length));
               const middleQuoteIndex = Math.floor(Math.random() * (json.length));
               const endQuoteIndex = Math.floor(Math.random() * (json.length));
-              $(".full-quote").html(json[quoteIndex].quote.fullQuote);
-              $(".author").html(json[quoteIndex].author);
               $(".quote-fragments").html(json[beginningQuoteIndex].quote.beginningQuote + " " +
               json[middleQuoteIndex].quote.middleQuote + " " + json[endQuoteIndex].quote.endQuote);
           };
