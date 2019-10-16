@@ -18,10 +18,12 @@ $(document).ready(function() {
             
         fullQuote = json[quoteIndex].quote.fullQuote;
         author = json[quoteIndex].author;
+        fragmentedQuote = beginningQuote + middleQuote + endQuote;
         
         
         console.log(fullQuote);
         console.log(author);
+        console.log(fragmentedQuote);
 
         //create dropdown for fullquote or mixed quote selection. Wrap outputs for each instance in functions and call on selection
 
