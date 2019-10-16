@@ -3,7 +3,7 @@
         
               //global
               let fullQuote = "";
-              let randomQuote = "";
+              let fragmentedQuote = "";
               let author = "";
           
               //obtains random array number to generate random full quote
