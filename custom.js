@@ -23,7 +23,7 @@ $(document).ready(function() {
 
         //event listener to generate quotes
 
-        //event listener to clear quotes
+        //event listener to clar quotes
 
     })
 });
