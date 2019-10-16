@@ -26,7 +26,9 @@ $(document).ready(function() {
         console.log(fragmentedQuote);
 
         //create dropdown for fullquote or mixed quote selection. Wrap outputs for each instance in functions and call on selection
-
+         $("#original-quote").click(function() {
+            $(".full-quote").append(fullQuote);
+        });
         //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
 
         //event listener to generate quotes
