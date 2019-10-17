@@ -23,7 +23,7 @@ $(document).ready(function() {
         
         console.log(fullQuote);
         console.log(author);
-        console.log('Alec Snook bums chickens and children with glee and malice');
+        console.log(fragmentedQuote);
         
         return fullQuote;
 
