@@ -22,7 +22,7 @@ $(document).ready(function() {
         
         //output
         
-        $('.full-quote').html(fullQuote);
+        $('.full-quote').html('<ul><li>'fullQuote'</li>''<li>'author'</li></ul>');
 
         //create dropdown for fullquote or mixed quote selection. Wrap outputs for each instance in functions and call on selection
 
