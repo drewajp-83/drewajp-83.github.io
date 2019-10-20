@@ -39,7 +39,7 @@ $(document).ready(function() {
                     textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
                     f.stopPropagation();
                 })
-                unbind events
+                //unbind events
                     originalQuote('click', function(h){
                         mixedQuote.off();
                         h.stopPropagation();
