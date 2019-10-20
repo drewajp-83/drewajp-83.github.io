@@ -41,9 +41,10 @@ $(document).ready(function() {
                     f.stopPropagation();
                 })
                 //event listener to clear quotes
-                //textArea.on('click', function(g){
-                    //textArea.remove
-                //})
+                $("clear").on('click', function(g){
+                    textArea.empty();
+                })
+
             });
 
     })
