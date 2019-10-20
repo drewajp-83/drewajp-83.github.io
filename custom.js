@@ -33,8 +33,7 @@ $(document).ready(function() {
                 document.getElementById("user-select").innerHTML= document.getElementById("myList").value;  
              }); 
             
-            dropdownValue = function
-            console.log(dropdownValue);
+            dropdownValue = document.getElementById("user-select").value;
 
         //event listener to generate quotes
         
