@@ -31,14 +31,23 @@ $(document).ready(function() {
         //event listener to generate quotes
         
             $(function(){
-                let originalQuote = $("#original-quote").one('click', function(e){
+                let originalQuote = $("#original-quote").on('click', function(e){
                     textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
                     e.stopPropagation();
                 })
-                let mixedQuote = $("#mixed-quote").one('click', function(f){
+                let mixedQuote = $("#mixed-quote").on('click', function(f){
                     textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
                     f.stopPropagation();
                 })
+                //unbind events
+                    originalQuote('click', function(h){
+                        mixedQuote.off();
+                        h.stopPropagation();
+                    })
+                    mixedQuote('click', function(j){
+                        originalQuote.off();
+                        j.stopPropagation();
+                    })
                 //event listener to clear quotes
                 let clearQuote = $("#clear").on('click', function(g){
                     textArea.empty();
