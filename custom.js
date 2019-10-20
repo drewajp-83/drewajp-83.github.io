@@ -4,6 +4,7 @@ $(document).ready(function() {
     let author = "";
     let fragmentedQuote = "";
     let textArea = $('.full-quote');
+    let dropdownValue = "";
     $.getJSON("quotes_final.json", function(json) {
         //obtains random array number to generate random full quote
         const quoteIndex = Math.floor(Math.random() * (json.length));
@@ -28,7 +29,7 @@ $(document).ready(function() {
 
         //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
         
-            let dropdownValue = $( "select" ) .change(function () {    
+            dropdownValue = $( "select" ).change(function () {    
                 document.getElementById("myList").value;  
                 console.log(dropdownValue);
              });  
