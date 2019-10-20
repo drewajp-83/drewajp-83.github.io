@@ -34,11 +34,12 @@ $(document).ready(function() {
         //event listener to generate quotes
         
             $(function(){
-                $('#original-quote').bind('click', function originalQuote(e){
+                let originalQuoteHandler = function(e){
                     textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
-                $('#original-quote').unbind('click', originalQuote);
-                    e.stopPropagation();
-                });
+                    $('#original-quote').bind('click', originalQuoteHandler);
+                    $('#original-quote').unbind('click', originalQuoteHandler);
+                    e.stopPropagation;
+                }
             });
 
         //event listener to clear quotes
