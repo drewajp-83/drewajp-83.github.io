@@ -34,8 +34,9 @@ $(document).ready(function() {
         //event listener to generate quotes
         
             $(function(){
-                $("#original-quote").one('click', function(e){
+                $('#original-quote').bind('click', function originalQuote(e){
                     textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
+                $('#original-quote').unbind('click', originalQuote);
                     e.stopPropagation();
                 });
             });
