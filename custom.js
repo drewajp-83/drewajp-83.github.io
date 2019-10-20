@@ -39,7 +39,7 @@ $(document).ready(function() {
                     textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
                     f.stopPropagation();
                 })
-                /*unbind events
+                unbind events
                     originalQuote('click', function(h){
                         mixedQuote.off();
                         h.stopPropagation();
@@ -47,7 +47,7 @@ $(document).ready(function() {
                     mixedQuote('click', function(j){
                         originalQuote.off();
                         j.stopPropagation();
-                    })*/
+                    });
                 //event listener to clear quotes
                 let clearQuote = $("#clear").on('click', function(g){
                     textArea.empty();
