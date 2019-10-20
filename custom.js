@@ -34,6 +34,7 @@ $(document).ready(function() {
              }); 
             
             dropdownValue = document.getElementById("user-select").value;
+            console.log(dropdownValue);
 
         //event listener to generate quotes
         
