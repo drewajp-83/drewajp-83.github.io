@@ -36,13 +36,15 @@ $(document).ready(function() {
                     textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
                     e.stopPropagation();
                 })
-                 $("#original-quote").on('click', function(f){
+                 $("#mixed-quote").on('click', function(f){
                     textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
                     f.stopPropagation();
                 })
+                //event listener to clear quotes
+                //textArea.on('click', function(g){
+                    //textArea.remove
+                //})
             });
-
-        //event listener to clear quotes
 
     })
 });
