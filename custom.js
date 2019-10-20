@@ -23,10 +23,7 @@ $(document).ready(function() {
         
         //keep text area empty on page load
         textArea.empty();
-        
-        //output
-        //textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
-
+       
         //create dropdown for fullquote or mixed quote selection. Wrap outputs for each instance in functions and call on selection
 
         //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
@@ -38,6 +35,13 @@ $(document).ready(function() {
                     textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
                     $('#original-quote').bind('click', originalQuoteHandler);
                     $('#original-quote').unbind('click', originalQuoteHandler);
+                    e.stopPropagation;
+                }
+                
+                let mixedUpQuote = function(e){
+                    textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>';
+                    $('#mixed-quote').bind('click', originalQuoteHandler);
+                    $('#mixed-quote').unbind('click', originalQuoteHandler);
                     e.stopPropagation;
                 }
             });
