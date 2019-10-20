@@ -34,7 +34,7 @@ $(document).ready(function() {
         //event listener to generate quotes
         
         function btnClick(){
-            $('h1').click(function(){
+            $('#original-quote').click(function(e){
                 textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
             });    
            }
