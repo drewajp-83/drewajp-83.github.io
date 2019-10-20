@@ -35,11 +35,11 @@ $(document).ready(function() {
                 $("#original-quote").on('click', function(e){
                     textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
                     e.stopPropagation();
-                }
-                $("#mixed-quote").on('click', function(e){
-                    textArea.append('<ul><li>' + fullQuote + '</li></ul>');
-                    e.stopPropagation();
-                });
+                })
+                 $("#original-quote").on('click', function(f){
+                    textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
+                    f.stopPropagation();
+                })
             });
 
         //event listener to clear quotes
