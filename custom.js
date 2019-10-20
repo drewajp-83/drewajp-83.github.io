@@ -33,9 +33,9 @@ $(document).ready(function() {
         
             $(function(){
                 $("#original-quote").one('click', function(e){
+                    location.reload();
                     textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
                     e.stopPropagation();
-                    location.reload();
                 });
             });
 
