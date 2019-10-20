@@ -31,8 +31,8 @@ $(document).ready(function() {
         
             dropdownValue = $( "select" ).change(function () {    
                 document.getElementById("myList").value;  
-                console.log(dropdownValue);
              });  
+            console.log(dropdownValue);
 
         //event listener to generate quotes
         
