@@ -31,6 +31,7 @@ $(document).ready(function() {
         
             dropdownValue = $( "select" ).change(function () {    
                 document.getElementById("myList").value;  
+                return dropdownValue;
              });  
             console.log(dropdownValue);
 
