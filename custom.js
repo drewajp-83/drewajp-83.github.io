@@ -25,7 +25,7 @@ $(document).ready(function() {
         //textArea.empty();
         
         //output
-        textArea.append('<ul><li>' + fullQuote + '<li>' + author + '</li></ul>');
+        textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
 
         //create dropdown for fullquote or mixed quote selection. Wrap outputs for each instance in functions and call on selection
 
