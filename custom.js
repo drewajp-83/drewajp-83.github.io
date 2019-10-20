@@ -19,6 +19,10 @@ $(document).ready(function() {
         fullQuote = json[quoteIndex].quote.fullQuote;
         author = json[quoteIndex].author;
         fragmentedQuote = beginningQuote + middleQuote + endQuote;
+        
+        //output
+        
+        $('.full-quote').html(fullQuote);
 
         //create dropdown for fullquote or mixed quote selection. Wrap outputs for each instance in functions and call on selection
 
@@ -29,7 +33,4 @@ $(document).ready(function() {
         //event listener to clar quotes
 
     })
-        console.log(fullQuote);
-        console.log(author);
-        console.log(fragmentedQuote);
 });
