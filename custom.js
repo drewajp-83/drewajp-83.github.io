@@ -28,8 +28,9 @@ $(document).ready(function() {
 
         //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
         
-            $( "select" ) .change(function () {    
-                document.getElementById("loc").innerHTML="You selected: "+document.getElementById("myList").value;  
+            let dropdownValue = $( "select" ) .change(function () {    
+                document.getElementById("myList").value;  
+                console.log(dropdownValue);
              });  
 
         //event listener to generate quotes
