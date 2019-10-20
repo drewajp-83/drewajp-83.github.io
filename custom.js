@@ -32,11 +32,11 @@ $(document).ready(function() {
         //event listener to generate quotes
         
             $(function(){
-                $("#original-quote").on('click', function(e){
+                $("#original-quote").one('click', function(e){
                     textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
                     e.stopPropagation();
                 })
-                 $("#mixed-quote").on('click', function(f){
+                 $("#mixed-quote").one('click', function(f){
                     textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
                     f.stopPropagation();
                 })
