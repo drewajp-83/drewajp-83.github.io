@@ -32,6 +32,12 @@ $(document).ready(function() {
         //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
 
         //event listener to generate quotes
+        
+        function btnClick(){
+            $(".original-quote").button().click(function(){
+                alert("button");
+            });    
+           }
 
         //event listener to clear quotes
 
