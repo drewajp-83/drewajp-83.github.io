@@ -33,11 +33,11 @@ $(document).ready(function() {
 
         //event listener to generate quotes
         
-        function btnClick(){
-            $('#original-quote').click(function(e){
-                textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
-            });    
-           }
+            $(function(){
+                $("#original-quote").click(function(){
+                    alert('clicked!');
+                });
+            });
 
         //event listener to clear quotes
 
