@@ -3,6 +3,7 @@ $(document).ready(function() {
     let fullQuote = "";
     let author = "";
     let fragmentedQuote = "";
+    let textArea = $('.full-quote');
     $.getJSON("quotes_final.json", function(json) {
         //obtains random array number to generate random full quote
         const quoteIndex = Math.floor(Math.random() * (json.length));
@@ -20,9 +21,11 @@ $(document).ready(function() {
         author = json[quoteIndex].author;
         fragmentedQuote = beginningQuote + middleQuote + endQuote;
         
-        //output
+        //keep text area empty on page load
+        //textArea.empty();
         
-        $('.full-quote').html('<ul><li>'fullQuote'</li>''<li>'author'</li></ul>');
+        //output
+        textArea.append('<ul><li>'fullQuote'</li></ul>');
 
         //create dropdown for fullquote or mixed quote selection. Wrap outputs for each instance in functions and call on selection
 
