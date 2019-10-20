@@ -31,11 +31,10 @@ $(document).ready(function() {
         //event listener to generate quotes
         
             $(function(){
-                let originalQuoteHandler = function(e){
+                $("#original-quote").one('click', function(e){
                     textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
-                    $('#original-quote').on('click', originalQuoteHandler);
-                    e.stopPropagation;
-                }
+                    e.stopPropagation();
+                });
             });
 
         //event listener to clear quotes
