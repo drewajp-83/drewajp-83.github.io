@@ -34,7 +34,7 @@ $(document).ready(function() {
         //event listener to generate quotes
         
         function btnClick(){
-            $('#original-quote').click(function(){
+            $('h1').click(function(){
                 alert("button clicked");
             });    
            }
