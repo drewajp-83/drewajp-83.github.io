@@ -52,6 +52,7 @@ $(document).ready(function() {
                 //event listener to clear quotes
                 let clearQuote = $("#clear").on('click', function(g){
                     textArea.empty();
+                    location.reload(true);
                     g.stopPropagation();
                 })
             });
