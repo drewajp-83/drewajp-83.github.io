@@ -40,14 +40,7 @@ $(document).ready(function() {
                     f.stopPropagation();
                 })
                 //unbind events
-                    originalQuote('click', function(h){
-                        mixedQuote.off();
-                        h.stopPropagation();
-                    })
-                    mixedQuote('click', function(j){
-                        originalQuote.off();
-                        j.stopPropagation();
-                    });
+
                 //event listener to clear quotes
                 let clearQuote = $("#clear").on('click', function(g){
                     textArea.empty();
