@@ -22,7 +22,7 @@ $(document).ready(function() {
         fragmentedQuote = beginningQuote + middleQuote + endQuote;
         
         //keep text area empty on page load
-        //textArea.empty();
+        textArea.empty();
         
         //output
         textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
@@ -35,7 +35,7 @@ $(document).ready(function() {
         
         function btnClick(){
             $('h1').click(function(){
-                alert("button clicked");
+                textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
             });    
            }
 
