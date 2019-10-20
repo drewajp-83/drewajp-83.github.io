@@ -24,8 +24,7 @@ $(document).ready(function() {
         
         //keep text area empty on page load
         textArea.empty();
-       
-        //create dropdown for fullquote or mixed quote selection. Wrap outputs for each instance in functions and call on selection
+     
 
         //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
 
@@ -41,11 +40,10 @@ $(document).ready(function() {
                     f.stopPropagation();
                 })
                 //event listener to clear quotes
-                $("clear").on('click', function(g){
+                $("#clear").on('click', function(g){
                     textArea.empty();
+                    g.stopPropagation();
                 })
-
             });
-
-    })
-});
+    })// end JSON function
+});//end document ready
