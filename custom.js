@@ -39,7 +39,7 @@ $(document).ready(function() {
                 }
                 
                 let mixedUpQuote = function(e){
-                    textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>';
+                    textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
                     $('#mixed-quote').bind('click', mixedUpQuote);
                     $('#mixed-quote').unbind('click', mixedUpQuote);
                     e.stopPropagation;
