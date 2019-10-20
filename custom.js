@@ -34,7 +34,7 @@ $(document).ready(function() {
                 let originalQuoteHandler = function(e){
                     textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
                     $('#original-quote').bind('click', originalQuoteHandler);
-                    $('#original-quote').unbind('click', originalQuoteHandler);
+                    $('#original-quote').off('click', originalQuoteHandler);
                     e.stopPropagation;
                 }
             });
