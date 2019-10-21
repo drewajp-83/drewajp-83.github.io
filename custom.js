@@ -32,11 +32,6 @@ $(document).ready(function() {
             $("select").change(function printDropdown(){    
                 document.getElementById("user-select").innerHTML= document.getElementById("myList").value;  
              }); 
-            
-            dropdownValue = $("#myList").change(function captureChange(){
-                document.getElementById("myList").value;
-             });
-            console.log(dropdownValue);
 
         //event listener to generate quotes
         
