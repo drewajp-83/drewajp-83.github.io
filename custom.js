@@ -25,6 +25,9 @@ $(document).ready(function() {
         
         //keep text area empty on page load
         textArea.empty();
+        
+        fullQuote.repeat(5);
+        console.log(fullQuote);
      
 
         //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
