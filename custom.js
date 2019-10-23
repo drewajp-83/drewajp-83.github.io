@@ -13,6 +13,10 @@ $(document).ready(function() {
         const middleQuoteIndex = Math.floor(Math.random() * (json.length));
         const endQuoteIndex = Math.floor(Math.random() * (json.length));
         
+        //loop quoteIndex
+                for (var i = 1; i < 8; i++) quoteIndex(i);
+                console.log(quoteIndex)
+                   
         //fragmented quote variables
         let beginningQuote = json[beginningQuoteIndex].quote.beginningQuote;
         let middleQuote = json[middleQuoteIndex].quote.middleQuote;
@@ -27,8 +31,7 @@ $(document).ready(function() {
         textArea.empty();
         
         fullQuote.repeat(5);
-        console.log(fullQuote);
-     
+
 
         //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
         
@@ -56,11 +59,7 @@ $(document).ready(function() {
                     g.stopPropagation();
                 })
             });
-         //loop fullQuote
-             $(function(){
-                for (var i = 1; i < 8; i++) fullQuote(i);
-                console.log(fullQuote);
-             });
+
         
     })// end JSON function
 });//end document ready
