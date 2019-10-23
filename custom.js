@@ -15,7 +15,7 @@ $(document).ready(function() {
         
         //loop quoteIndex
                 for (var i = 1; i < 8; i++) quoteIndex(i);
-                console.log(quoteIndex)
+                console.log(quoteIndex);
                    
         //fragmented quote variables
         let beginningQuote = json[beginningQuoteIndex].quote.beginningQuote;
