@@ -14,8 +14,10 @@ $(document).ready(function() {
         const endQuoteIndex = Math.floor(Math.random() * (json.length));
         
         //loop quoteIndex
-                for (var i = 1; i < 8; i++) quoteIndex(i);
-                console.log(quoteIndex);
+                for (var i = 1; i < 8; i++) {
+                    quoteIndex(i);
+                    console.log(quoteIndex);
+                }  
                    
         //fragmented quote variables
         let beginningQuote = json[beginningQuoteIndex].quote.beginningQuote;
