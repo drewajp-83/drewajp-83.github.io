@@ -18,7 +18,7 @@ $(document).ready(function() {
         let middleQuote = json[middleQuoteIndex].quote.middleQuote;
         let endQuote = json[endQuoteIndex].quote.endQuote;
         
-        //declare quote options within global variables
+        //declare quote options within global variables within functions
         fullQuote = json[quoteIndex].quote.fullQuote;
         author = json[quoteIndex].author;
         fragmentedQuote = beginningQuote + middleQuote + endQuote;
