@@ -56,5 +56,11 @@ $(document).ready(function() {
                     g.stopPropagation();
                 })
             });
+         //loop fullQuote
+             $(function(){
+                for (var i = 1; i < 8; i++) fullQuote(i);
+                console.log(fullQuote);
+             });
+        
     })// end JSON function
 });//end document ready
