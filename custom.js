@@ -25,12 +25,10 @@ $(document).ready(function() {
         fragmentedQuote = beginningQuote + middleQuote + endQuote;
         
         //loop through quote
-         $(function fullQuoteRender(){
-                fullQuote;
-                for (var i = 1; i < 8; i++) {
-                    console.log(fullQuoteRender(i));
-                } 
-         });
+         var times = 5;
+         for(var i=0; i < times; i++){
+            fullQuote();
+          }
         
       
         //keep text area empty on page load
