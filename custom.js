@@ -24,6 +24,10 @@ $(document).ready(function() {
             fullQuote = json[quoteIndex].quote.fullQuote;
             author = json[quoteIndex].author;
             fragmentedQuote = beginningQuote + middleQuote + endQuote;
+            
+            return fullQuote;
+            return author;
+            return fragmentedQuote;
         }
         
         //loop through quote
