@@ -22,15 +22,14 @@ $(document).ready(function() {
         //declare quote options within global variables within functions
         fullQuote = function FullQuoteRender(){
             json[quoteIndex].quote.fullQuote;
+                for (var i = 1; i < 8; i++) {
+                    console.log(fullQuoteRender(i));
+                } 
         };
         author = json[quoteIndex].author;
         fragmentedQuote = beginningQuote + middleQuote + endQuote;
         
-         //loop fullQuote
-                for (var i = 1; i < 8; i++) {
-                    console.log(fullQuoteRender(i));
-                }  
-        
+      
         //keep text area empty on page load
         textArea.empty();
         
