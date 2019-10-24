@@ -12,6 +12,9 @@ $(document).ready(function() {
         const beginningQuoteIndex = Math.floor(Math.random() * (json.length));
         const middleQuoteIndex = Math.floor(Math.random() * (json.length));
         const endQuoteIndex = Math.floor(Math.random() * (json.length));
+        
+        for (let value in json)
+            console.log(value, json[value].quote.fullQuote);
        
                    
         //fragmented quote variables
@@ -36,12 +39,7 @@ $(document).ready(function() {
             $("select").change(function printDropdown(){    
                 document.getElementById("user-select").innerHTML= document.getElementById("myList").value;  
              }); 
-        
-            //loop test
-        
-            for(fullQuote; fullQuote < 5; fullQuote++){
-                console.log(fullQuote);
-            }
+
 
         //event listener to generate quotes
         
