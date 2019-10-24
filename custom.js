@@ -6,6 +6,8 @@ $(document).ready(function() {
     let textArea = $('.full-quote');
     let dropdownValue = "";
     $.getJSON("quotes_final.json", function(json) {
+        
+            fullQuote = json.quote.fullQuote;
 
                 function createQuote(full, begin, mid, end) {
 
@@ -24,6 +26,7 @@ $(document).ready(function() {
 
                     console.log(beginningQuote);
                 }
+            console.log(fullQuote);
         
       
         //keep text area empty on page load
