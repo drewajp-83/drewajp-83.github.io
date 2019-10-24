@@ -20,14 +20,17 @@ $(document).ready(function() {
         let endQuote = json[endQuoteIndex].quote.endQuote;
         
         //declare quote options within global variables within functions
-        $(function fullQuoteRender(){
-            json[quoteIndex].quote.fullQuote;
+        fullQuote = json[quoteIndex].quote.fullQuote;
+        author = json[quoteIndex].author;
+        fragmentedQuote = beginningQuote + middleQuote + endQuote;
+        
+        //loop through quote
+         $(function fullQuoteRender(){
+                fullQuote;
                 for (var i = 1; i < 8; i++) {
                     console.log(fullQuoteRender(i));
                 } 
-        });
-        author = json[quoteIndex].author;
-        fragmentedQuote = beginningQuote + middleQuote + endQuote;
+         });
         
       
         //keep text area empty on page load
