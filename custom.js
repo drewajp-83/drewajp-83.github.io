@@ -32,11 +32,11 @@ $(document).ready(function() {
                     let beginIndex = Math.floor(Math.random() * begin.length);
                     let midIndex = Math.floor(Math.random() * mid.length);
                     let endIndex = Math.floor(Math.random() * end.length);
-
-                    var beginning = full[fullIndex];
-                    var middle = begin[beginIndex];
-                    var end = mid[midIndex];
-                    author = end[endIndex];
+                    
+                    let full = begin[beginIndex];
+                    let beginning = begin[beginIndex];
+                    let middle = mid[midIndex];
+                    let end = end[endIndex];
 
                 //assembles quote
                     fullQuote = '"' + beginning + middle + end + '"';
