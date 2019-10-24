@@ -7,11 +7,11 @@ $(document).ready(function() {
     let dropdownValue = "";
     $.getJSON("quotes_final.json", function(json) {
         //obtains random array number to generate random full quote
-        const quoteIndex = Math.floor(Math.random() * (json.length));
+        let quoteIndex = Math.floor(Math.random() * (json.length));
         //obtains random array number for each quote fragment
-        const beginningQuoteIndex = Math.floor(Math.random() * (json.length));
-        const middleQuoteIndex = Math.floor(Math.random() * (json.length));
-        const endQuoteIndex = Math.floor(Math.random() * (json.length));
+        let beginningQuoteIndex = Math.floor(Math.random() * (json.length));
+        let middleQuoteIndex = Math.floor(Math.random() * (json.length));
+        let endQuoteIndex = Math.floor(Math.random() * (json.length));
         
         for (let value in json)
             console.log(value, json[value].quote.fullQuote);
