@@ -25,13 +25,24 @@ $(document).ready(function() {
         fragmentedQuote = beginningQuote + middleQuote + endQuote;*/
         
         //loop through quote
-        $(function randomQuoteGenerator(fullQuote){
-            Math.floor(Math.random() * (json.length));
-            console.log(fullQuote)
-        })
-        
-        for (let value in json)
-            console.log(value, fullQuote);
+                function createQuote(full, begin, mid, end) {
+
+                    //randomly selecting sentence fragments
+                    let fullIndex = Math.floor(Math.random() * full.length);
+                    let beginIndex = Math.floor(Math.random() * begin.length);
+                    let midIndex = Math.floor(Math.random() * mid.length);
+                    let endIndex = Math.floor(Math.random() * end.length);
+
+                    var beginning = full[fullIndex];
+                    var middle = begin[beginIndex];
+                    var end = mid[midIndex];
+                    author = end[endIndex];
+
+                //assembles quote
+                    fullQuote = '"' + beginning + middle + end + '"';
+
+                    console.log(fullQuote);
+                }
         
       
         //keep text area empty on page load
