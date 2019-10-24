@@ -14,7 +14,7 @@ $(document).ready(function() {
         let middleQuoteIndex = Math.floor(Math.random() * (json.length));
         let endQuoteIndex = Math.floor(Math.random() * (json.length));
        
-        function(){          
+        function dotNotation(){          
             //fragmented quote variables
             let beginningQuote = json[beginningQuoteIndex].quote.beginningQuote;
             let middleQuote = json[middleQuoteIndex].quote.middleQuote;
