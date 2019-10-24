@@ -7,26 +7,26 @@ $(document).ready(function() {
     let dropdownValue = "";
     $.getJSON("quotes_final.json", function(json) {
         
-            fullQuote = json.quote;
+        obtains random array number to generate random full quote
+        let quoteIndex = Math.floor(Math.random() * (json.length));
+        //obtains random array number for each quote fragment
+        let beginningQuoteIndex = Math.floor(Math.random() * (json.length));
+        let middleQuoteIndex = Math.floor(Math.random() * (json.length));
+        let endQuoteIndex = Math.floor(Math.random() * (json.length));
+       
+        function(){          
+            //fragmented quote variables
+            let beginningQuote = json[beginningQuoteIndex].quote.beginningQuote;
+            let middleQuote = json[middleQuoteIndex].quote.middleQuote;
+            let endQuote = json[endQuoteIndex].quote.endQuote;
 
-                function createQuote(full, begin, mid, end) {
-
-                    //randomly selecting sentence fragments
-                    let fullIndex = Math.floor(Math.random() * full.length);
-                    let beginIndex = Math.floor(Math.random() * begin.length);
-                    let midIndex = Math.floor(Math.random() * mid.length);
-                    let endIndex = Math.floor(Math.random() * end.length);
-                    
-                    let beginningQuote = begin[beginIndex];
-                    let middleQuote = mid[midIndex];
-                    let endQuote = end[endIndex];
-
-                //assembles quote
-                    fullQuote = '"' + beginningQuote + middleQuote + end + '"';
-
-                    console.log(beginningQuote);
-                }
-            console.log(fullQuote);
+            //declare quote options within global variables within functions
+            fullQuote = json[quoteIndex].quote.fullQuote;
+            author = json[quoteIndex].author;
+            fragmentedQuote = beginningQuote + middleQuote + endQuote;
+        }
+        
+        //loop through quote
         
       
         //keep text area empty on page load
