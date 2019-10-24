@@ -6,7 +6,7 @@ $(document).ready(function() {
     let textArea = $('.full-quote');
     let dropdownValue = "";
     $.getJSON("quotes_final.json", function(json) {
-      $each.(json, function(){  
+      $each.(json, function dotNotation(){  
         //obtains random array number to generate random full quote
         let quoteIndex = Math.floor(Math.random() * (json.length));
         //obtains random array number for each quote fragment
