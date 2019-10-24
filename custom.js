@@ -36,6 +36,12 @@ $(document).ready(function() {
             $("select").change(function printDropdown(){    
                 document.getElementById("user-select").innerHTML= document.getElementById("myList").value;  
              }); 
+        
+            //loop test
+        
+            for(fullQuote; fullQuote < 5; fullQuote++){
+                console.log(fullQuote);
+            }
 
         //event listener to generate quotes
         
