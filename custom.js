@@ -6,25 +6,7 @@ $(document).ready(function() {
     let textArea = $('.full-quote');
     let dropdownValue = "";
     $.getJSON("quotes_final.json", function(json) {
-        //obtains random array number to generate random full quote
-        /*let quoteIndex = Math.floor(Math.random() * (json.length));
-        //obtains random array number for each quote fragment
-        let beginningQuoteIndex = Math.floor(Math.random() * (json.length));
-        let middleQuoteIndex = Math.floor(Math.random() * (json.length));
-        let endQuoteIndex = Math.floor(Math.random() * (json.length));
-       
-                   
-        //fragmented quote variables
-        let beginningQuote = json[beginningQuoteIndex].quote.beginningQuote;
-        let middleQuote = json[middleQuoteIndex].quote.middleQuote;
-        let endQuote = json[endQuoteIndex].quote.endQuote;
-        
-        //declare quote options within global variables within functions
-        fullQuote = json[quoteIndex].quote.fullQuote;
-        author = json[quoteIndex].author;
-        fragmentedQuote = beginningQuote + middleQuote + endQuote;*/
-        
-        //loop through quote
+
                 function createQuote(full, begin, mid, end) {
 
                     //randomly selecting sentence fragments
@@ -38,9 +20,9 @@ $(document).ready(function() {
                     let endQuote = end[endIndex];
 
                 //assembles quote
-                    fullQuote = '"' + beginning + middle + end + '"';
+                    fullQuote = '"' + beginningQuote + middleQuote + end + '"';
 
-                    console.log(fullQuote);
+                    console.log(beginningQuote);
                 }
         
       
