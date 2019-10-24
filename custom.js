@@ -33,9 +33,9 @@ $(document).ready(function() {
                     let midIndex = Math.floor(Math.random() * mid.length);
                     let endIndex = Math.floor(Math.random() * end.length);
                     
-                    let beginning = begin[beginIndex];
-                    let middle = mid[midIndex];
-                    let end = end[endIndex];
+                    let beginningQuote = begin[beginIndex];
+                    let middleQuote = mid[midIndex];
+                    let endQuote = end[endIndex];
 
                 //assembles quote
                     fullQuote = '"' + beginning + middle + end + '"';
