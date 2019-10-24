@@ -24,9 +24,9 @@ $(document).ready(function() {
             author = json[quoteIndex].author;
             fragmentedQuote = beginningQuote + middleQuote + endQuote;
             
-            return fullQuote;
-            return author;
-            return fragmentedQuote;
+            console.log(fullQuote);
+            console.log(author);
+            console.log(fragmentedQuote);
         }
         
         //loop through quote
