@@ -12,9 +12,6 @@ $(document).ready(function() {
         let beginningQuoteIndex = Math.floor(Math.random() * (json.length));
         let middleQuoteIndex = Math.floor(Math.random() * (json.length));
         let endQuoteIndex = Math.floor(Math.random() * (json.length));
-        
-        for (let value in json)
-            console.log(value, json[value].quote.fullQuote);
        
                    
         //fragmented quote variables
@@ -28,6 +25,9 @@ $(document).ready(function() {
         fragmentedQuote = beginningQuote + middleQuote + endQuote;
         
         //loop through quote
+        
+        for (let value in json)
+            console.log(value, fullQuote);
         
       
         //keep text area empty on page load
