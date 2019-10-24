@@ -20,7 +20,7 @@ $(document).ready(function() {
         let endQuote = json[endQuoteIndex].quote.endQuote;
         
         //declare quote options within global variables within functions
-        fullQuote = function FullQuoteRender(){
+        fullQuote = function()FullQuoteRender{
             json[quoteIndex].quote.fullQuote;
                 for (var i = 1; i < 8; i++) {
                     console.log(fullQuoteRender(i));
