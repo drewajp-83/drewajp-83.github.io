@@ -27,7 +27,7 @@ $(document).ready(function() {
         //loop through quote
          var times = 5;
          for(var i=0; i < times; i++){
-            fullQuote();
+            fullQuote(i);
           }
         
       
