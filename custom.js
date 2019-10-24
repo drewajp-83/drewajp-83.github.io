@@ -5,8 +5,14 @@ $(document).ready(function() {
     let fragmentedQuote = "";
     let textArea = $('.full-quote');
     let dropdownValue = "";
-    $.getJSON("quotes_final.json", function(json) {
-      $(json.quote).each(function dotNotation(){  
+    //$.getJSON("quotes_final.json", function(json) {initialise JSON call
+    function setUp(){
+        loadJSON("quotes_final.json", getData);
+    }
+    function getData(json){
+        console.log(json);
+    }
+    // 
         //obtains random array number to generate random full quote
         let quoteIndex = Math.floor(Math.random() * (json.length));
         //obtains random array number for each quote fragment
@@ -65,5 +71,5 @@ $(document).ready(function() {
             });
 
         
-    })// end JSON function
+    //})// end JSON function
 });//end document ready
