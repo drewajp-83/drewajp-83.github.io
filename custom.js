@@ -7,7 +7,7 @@ $(document).ready(function() {
     let dropdownValue = "";
     $.getJSON("quotes_final.json", function(json) {
         
-            fullQuote = json.quote.fullQuote;
+            fullQuote = json.quote;
 
                 function createQuote(full, begin, mid, end) {
 
