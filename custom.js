@@ -7,7 +7,7 @@ $(document).ready(function() {
     let dropdownValue = "";
     $.getJSON("quotes_final.json", function(json) {
         
-        obtains random array number to generate random full quote
+        //obtains random array number to generate random full quote
         let quoteIndex = Math.floor(Math.random() * (json.length));
         //obtains random array number for each quote fragment
         let beginningQuoteIndex = Math.floor(Math.random() * (json.length));
