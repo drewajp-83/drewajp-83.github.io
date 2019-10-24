@@ -20,15 +20,18 @@ $(document).ready(function() {
         let endQuote = json[endQuoteIndex].quote.endQuote;
         
         //declare quote options within global variables within functions
-        fullQuote = json[quoteIndex].quote.fullQuote;
+        $(function fullQuote(){
+            json[quoteIndex].quote.fullQuote;
+                     const times = 5;
+                         for(let i=0; i < times; i++){
+                            fullQuote = json[quoteIndex].quote.fullQuote(i);
+                          }
+                           console.log(fullQuote); 
+                        });
         author = json[quoteIndex].author;
         fragmentedQuote = beginningQuote + middleQuote + endQuote;
         
         //loop through quote
-         var times = 5;
-         for(var i=0; i < times; i++){
-            console.log(fullQuote(i));
-          }
         
       
         //keep text area empty on page load
