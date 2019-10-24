@@ -12,11 +12,7 @@ $(document).ready(function() {
         const beginningQuoteIndex = Math.floor(Math.random() * (json.length));
         const middleQuoteIndex = Math.floor(Math.random() * (json.length));
         const endQuoteIndex = Math.floor(Math.random() * (json.length));
-        
-        //loop quoteIndex
-                //for (var i = 1; i < 8; i++) {
-                    //console.log(fullQuoteIndex(i));
-                //}  
+       
                    
         //fragmented quote variables
         let beginningQuote = json[beginningQuoteIndex].quote.beginningQuote;
@@ -24,15 +20,20 @@ $(document).ready(function() {
         let endQuote = json[endQuoteIndex].quote.endQuote;
         
         //declare quote options within global variables within functions
-        fullQuote = json[quoteIndex].quote.fullQuote;
+        fullQuote = (function FullQuoteRender(){
+            json[quoteIndex].quote.fullQuote;
+        });
         author = json[quoteIndex].author;
         fragmentedQuote = beginningQuote + middleQuote + endQuote;
+        
+         //loop fullQuote
+                for (var i = 1; i < 8; i++) {
+                    console.log(fullQuoteRender(i));
+                }  
         
         //keep text area empty on page load
         textArea.empty();
         
-        fullQuote.repeat(5);
-
 
         //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
         
