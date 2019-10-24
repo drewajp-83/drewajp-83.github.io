@@ -6,15 +6,14 @@ $(document).ready(function() {
     let textArea = $('.full-quote');
     let dropdownValue = "";
     $.getJSON("quotes_final.json", function(json) {
-        
+      function dotNotation(){  
         //obtains random array number to generate random full quote
         let quoteIndex = Math.floor(Math.random() * (json.length));
         //obtains random array number for each quote fragment
         let beginningQuoteIndex = Math.floor(Math.random() * (json.length));
         let middleQuoteIndex = Math.floor(Math.random() * (json.length));
         let endQuoteIndex = Math.floor(Math.random() * (json.length));
-       
-        function dotNotation(){          
+                
             //fragmented quote variables
             let beginningQuote = json[beginningQuoteIndex].quote.beginningQuote;
             let middleQuote = json[middleQuoteIndex].quote.middleQuote;
