@@ -33,7 +33,6 @@ $(document).ready(function() {
                     let midIndex = Math.floor(Math.random() * mid.length);
                     let endIndex = Math.floor(Math.random() * end.length);
                     
-                    let full = begin[beginIndex];
                     let beginning = begin[beginIndex];
                     let middle = mid[midIndex];
                     let end = end[endIndex];
