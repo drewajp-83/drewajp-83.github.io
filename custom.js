@@ -3,8 +3,8 @@ $(document).ready(function() {
     let fullQuote = "";
     let author = "";
     let fragmentedQuote = "";
-    let textArea = $('.full-quote');
     let dropdownValue = "";
+    const textArea = $('.full-quote');
     $.getJSON("quotes_final.json", function dotNotation(json) {
         //obtains random array number to generate random full quote
         let quoteIndex = Math.floor(Math.random() * (json.length));
@@ -56,7 +56,7 @@ $(document).ready(function() {
                 //unbind events
 
                 //event listener to clear quotes
-                let clearQuote = $("#clear").on('click', function(g){
+                const clearQuote = $("#clear").on('click', function(g){
                     textArea.empty();
                     location.reload(true);
                     g.stopPropagation();
