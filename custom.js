@@ -26,21 +26,23 @@ $(document).ready(function() {
             console.log(fullQuote);
             console.log(author);
             console.log(fragmentedQuote);
-        
-        //loop through quote
+       
      })// end JSON function
+    
         
-      
         //keep text area empty on page load
         textArea.empty();
         
 
         //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
-        
             $("select").change(function printDropdown(){    
                 document.getElementById("user-select").innerHTML= document.getElementById("myList").value;  
              }); 
-
+       
+        //loop through json function and return dropdown value selection
+    
+        for (var i = 0; i < 5; i++)
+            console.log(dotNotation(i));
 
         //event listener to generate quotes
         
