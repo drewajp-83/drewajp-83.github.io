@@ -41,9 +41,10 @@ $(document).ready(function() {
        
         //loop through json function and return dropdown value selection
     
-        let loopFunction = for (var i = 0; i < 5; i++){
+        function loopFunction(){
+            for (var i = 0; i < 5; i++){
             dotNotation(i);
-        }
+           }
         console.log(loopFunction);
 
         //event listener to generate quotes
