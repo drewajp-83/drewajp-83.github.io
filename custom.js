@@ -46,7 +46,7 @@ $(document).ready(function() {
             dotNotation(i);
            }
           };
-        console.log(loopFunction);
+        console.log(dotNotation);
 
         //event listener to generate quotes
         
