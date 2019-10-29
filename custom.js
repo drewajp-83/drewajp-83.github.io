@@ -40,10 +40,7 @@ $(document).ready(function() {
              }); 
        
         //loop through json function and return dropdown value selection
-    
-            for (var i = 0; i < 5; i++){
-            dotNotation(i);
-            }
+
 
         //event listener to generate quotes
         
