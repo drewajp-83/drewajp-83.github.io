@@ -27,10 +27,6 @@ $(document).ready(function() {
             console.log(author);
             console.log(fragmentedQuote);
         
-        
-            for (let = i; i < 6; i++) {
-                console.log(dotNotation(i));
-            } 
             quoteIndex.repeat(5);
                 console.log(quoteIndex);
         
