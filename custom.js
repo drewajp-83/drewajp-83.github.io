@@ -26,6 +26,11 @@ $(document).ready(function() {
             console.log(fullQuote);
             console.log(author);
             console.log(fragmentedQuote);
+        
+        {
+            for (let = i; i < 6; i++)
+                console.log(dotNotation(i));
+        }
        
      })// end JSON function
     
