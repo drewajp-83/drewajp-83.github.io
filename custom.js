@@ -31,6 +31,8 @@ $(document).ready(function() {
             for (let = i; i < 6; i++) {
                 console.log(dotNotation(i));
             } 
+            quoteIndex.repeat(5);
+                console.log(quoteIndex);
         
        
      })// end JSON function
