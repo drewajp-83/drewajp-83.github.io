@@ -8,6 +8,9 @@ $(document).ready(function() {
     $.getJSON("quotes_final.json", function dotNotation(json) {
         //obtains random array number to generate random full quote
         let quoteIndex = Math.floor(Math.random() * (json.length));
+            for(quoteIndex; quoteIndex < 6; quoteIndex++){
+                console.log(quoteIndex);
+            }
         //obtains random array number for each quote fragment
         let beginningQuoteIndex = Math.floor(Math.random() * (json.length));
         let middleQuoteIndex = Math.floor(Math.random() * (json.length));
@@ -22,10 +25,6 @@ $(document).ready(function() {
             fullQuote = json[quoteIndex].quote.fullQuote;
             author = json[quoteIndex].author;
             fragmentedQuote = beginningQuote + middleQuote + endQuote;
-            
-            console.log(fullQuote);
-            console.log(author);
-            console.log(fragmentedQuote);
         
        
      })// end JSON function
