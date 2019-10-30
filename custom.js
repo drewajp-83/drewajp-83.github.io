@@ -33,7 +33,9 @@ $(document).ready(function() {
 
         //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
             $("select").change(function printDropdown(){    
-                document.getElementById("user-select").innerHTML= document.getElementById("myList").value;  
+                document.getElementById("user-select").innerHTML= document.getElementById("myList").value;
+                let dropdownValue = document.getElementById("myList").value;
+                callQuotes(dropdownValue);
              }); 
        
         //loop through json function and return dropdown value selection
@@ -62,3 +64,7 @@ $(document).ready(function() {
 
         
 });//end document ready
+
+        function callQuotes(sizeQuote){
+            for (let i; i == sizeQuote; i++);
+        }
