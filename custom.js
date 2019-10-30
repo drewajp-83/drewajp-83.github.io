@@ -43,7 +43,7 @@ $(document).ready(function() {
 
         //event listener to generate quotes
         
-            $(function(){
+            $(function printQuotes(){
                 let originalQuote = $("#original-quote").on('click', function(e){
                     textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
                     e.stopPropagation();
@@ -66,5 +66,7 @@ $(document).ready(function() {
 });//end document ready
 
         function callQuotes(sizeQuote){
-            for (let i; i == sizeQuote; i++);
+            for (let i; i == sizeQuote; i++){
+                printQuotes();
+            };
         }
