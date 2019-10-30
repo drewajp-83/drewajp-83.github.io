@@ -28,8 +28,9 @@ $(document).ready(function() {
             console.log(fragmentedQuote);
         
         
-            for (let = i; i < 6; i++)
+            for (let = i; i < 6; i++) {
                 console.log(dotNotation(i));
+            } 
         
        
      })// end JSON function
