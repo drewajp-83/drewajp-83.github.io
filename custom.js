@@ -41,10 +41,6 @@ $(document).ready(function() {
              }); 
        
         //loop through json function and return dropdown value selection
-    
-        for (let=i;i<6;i++){
-            console.log(dotNotation(i));
-        }
 
 
         //event listener to generate quotes
