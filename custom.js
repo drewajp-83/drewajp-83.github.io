@@ -4,9 +4,9 @@ let author = "";
 let fragmentedQuote = "";
 let dropdownValue = "";
 const textArea = $('.full-quote');
-var fileURL = "quotes_final.json";
-var quoteCount = 0;
-var whichQuote = true; // default for original quote else mixed quote
+const fileURL = "quotes_final.json";
+let quoteCount = 0;
+let whichQuote = true; // default for original quote else mixed quote
 
 function handleAJAX_JSON(){
 
@@ -21,7 +21,7 @@ function handleAJAX_JSON(){
         if (data.length > 0) {
            
            // iterate the number of times with the selected drop-down value
-           for (var i = 0; i < quoteCount.length; i++) {
+           for (var i = 0; i < quoteCount -1.length; i++) {
 
            	generateQuote(data, data.length);
            	// quoteCount[i]
