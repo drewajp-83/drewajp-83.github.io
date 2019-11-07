@@ -17,17 +17,9 @@ function handleAJAX_JSON(){
       method: "GET",
       url: fileURL,
       success: function(data){
-
-        if (data.length > 0) {
-           
-           // iterate the number of times with the selected drop-down value
-           //for (var i = 0; i < quoteCount.length; i++) {
-
-           	generateQuote(data, data.length);
-           	// quoteCount[i]
-           //}
-        }
-      },
+			generateQuote(data, data.length);
+			// quoteCount[i]
+      	},
       error: function () {
         console.log('there is an error reading parsing the json file');
       },
