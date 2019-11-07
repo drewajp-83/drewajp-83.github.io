@@ -37,16 +37,13 @@ function handleSelectChange(){
 }
 
 function handleQuoteButtonsClick(){
-
 	if (quoteCount < 1){
 		alert('Please select the number of Quotes first!');
 		return;
 	}
 
 	textArea.empty();
-
 	$("#original-quote, #mixed-quote").on('click', function(){
-
 		if (this.id == 'original-quote') {
 		      whichQuote = true;
 		      handleAJAX_JSON();
@@ -54,15 +51,12 @@ function handleQuoteButtonsClick(){
 		      whichQuote = false;
 		      handleAJAX_JSON();
 		}
-		
 	});
 
 }
 
 function generateQuote(json_data, json_len){
-	
 	// json_len = json_data.length;
-
 	//obtains random array number to generate random full quote
     let quoteIndex = Math.floor(Math.random() * (json_len));
 
