@@ -1,72 +1,115 @@
-$(document).ready(function() {
-    //global variables
-    let fullQuote = "";
-    let author = "";
-    let fragmentedQuote = "";
-    let dropdownValue = "";
-    const textArea = $('.full-quote');
-    $.getJSON("quotes_final.json", function dotNotation(json) {
-        //obtains random array number to generate random full quote
-        let quoteIndex = Math.floor(Math.random() * (json.length));
-        //obtains random array number for each quote fragment
-        let beginningQuoteIndex = Math.floor(Math.random() * (json.length));
-        let middleQuoteIndex = Math.floor(Math.random() * (json.length));
-        let endQuoteIndex = Math.floor(Math.random() * (json.length));
-                
-            //fragmented quote variables
-            let beginningQuote = json[beginningQuoteIndex].quote.beginningQuote;
-            let middleQuote = json[middleQuoteIndex].quote.middleQuote;
-            let endQuote = json[endQuoteIndex].quote.endQuote;
+//global variables
+let fullQuote = "";
+let author = "";
+let fragmentedQuote = "";
+let dropdownValue = "";
+const textArea = $('.full-quote');
+var fileURL = "js/quotes_final.json";
+var quoteCount = 0;
+var whichQuote = true; // default for original quote else mixed quote
 
-            //declare quote options within global variables within functions
-            fullQuote = json[quoteIndex].quote.fullQuote;
-            author = json[quoteIndex].author;
-            fragmentedQuote = beginningQuote + middleQuote + endQuote;
-        
-       
-     })// end JSON function
-    
-        
-        //keep text area empty on page load
-        textArea.empty();
-        
+function handleAJAX_JSON(){
 
-        //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
-            $("select").change(function printDropdown(){    
-                document.getElementById("user-select").innerHTML= document.getElementById("myList").value;
-                let dropdownValue = document.getElementById("myList").value;
-                callQuotes(dropdownValue);
-             }); 
-       
-        //loop through json function and return dropdown value selection
+    $.ajax({
+      // headers: { 'Access-Control-Allow-Origin': '*' },
+      crossDomain: true,  
+      dataType: "json",
+      method: "GET",
+      url: fileURL,
+      success: function(data){
 
+        if (data.length > 0) {
+           
+           // iterate the number of times with the selected drop-down value
+           for (var i = 0; i < quoteCount.length; i++) {
 
-        //event listener to generate quotes
-        
-            $(function printQuotes(){
-                let originalQuote = $("#original-quote").on('click', function(e){
-                    textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
-                    e.stopPropagation();
-                })
-                let mixedQuote = $("#mixed-quote").on('click', function(f){
-                    textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
-                    f.stopPropagation();
-                })
-                //unbind events
-
-                //event listener to clear quotes
-                const clearQuote = $("#clear").on('click', function(g){
-                    textArea.empty();
-                    location.reload(true);
-                    g.stopPropagation();
-                })
-            });
-
-        
-});//end document ready
-
-        function callQuotes(sizeQuote){
-            for (let i; i == sizeQuote; i++){
-                printQuotes();
-            };
+           	generateQuote(data, data.length);
+           	// quoteCount[i]
+           }
         }
+      },
+      error: function () {
+        console.log('there is an error reading parsing the json file');
+      },
+    });
+
+}
+
+function handleClearQuote(){
+	textArea.empty();
+}
+
+function handleSelectChange(){
+	
+	//create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
+    $("#myList").change(function printDropdown(){
+
+        quoteCount = $("#myList").val();
+		document.getElementById("user-select").innerHTML = quoteCount;
+     });
+}
+
+function handleQuoteButtonsClick(){
+
+	if (quoteCount < 1){
+		alert('Please select the number of Quotes first!');
+		return;
+	}
+
+	textArea.empty();
+
+	$("#original-quote, #mixed-quote").on('click', function(){
+
+		if (this.id == 'original-quote') {
+		      whichQuote = true;
+		      handleAJAX_JSON();
+		} else if (this.id == 'mixed-quote') {
+		      whichQuote = false;
+		      handleAJAX_JSON();
+		}
+		
+	});
+
+	// $("#mixed-quote").on('click', function(){
+	// 	_this = $(this).data('clicked', true);
+	// 	if (_this) {
+	// 		alert('mixed quote is clicked')
+	// 		whichQuote = false;
+
+	// 		handleAJAX_JSON();
+
+	// 		return;
+	// 	}	
+	// });
+
+}
+
+function generateQuote(json_data, json_len){
+	
+	// json_len = json_data.length;
+
+	//obtains random array number to generate random full quote
+    let quoteIndex = Math.floor(Math.random() * (json_len));
+
+    //obtains random array number for each quote fragment
+    let beginningQuoteIndex = Math.floor(Math.random() * (json_len));
+    let middleQuoteIndex = Math.floor(Math.random() * (json_len));
+    let endQuoteIndex = Math.floor(Math.random() * (json_len));
+            
+    //fragmented quote variables
+    let beginningQuote = json_data[beginningQuoteIndex].quote.beginningQuote;
+    let middleQuote = json_data[middleQuoteIndex].quote.middleQuote;
+    let endQuote = json_data[endQuoteIndex].quote.endQuote;
+
+    //declare quote options within global variables within functions
+    fullQuote = json_data[quoteIndex].quote.fullQuote;
+    author = json_data[quoteIndex].author;
+    fragmentedQuote = beginningQuote + middleQuote + endQuote;
+
+    if (whichQuote == true) {
+    	textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
+    } else {
+    	textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
+    }
+}
+
