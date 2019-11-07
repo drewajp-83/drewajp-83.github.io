@@ -17,8 +17,7 @@ function handleAJAX_JSON(){
       method: "GET",
       url: fileURL,
       success: function(data){
-			generateQuote(data, data.length);
-			// quoteCount[i]
+			generateQuote(data, data.length); //the data call is pushed into the generateQuote parameters to handle the dot notation logic
       	},
       error: function () {
         console.log('there is an error reading parsing the json file');
@@ -32,7 +31,6 @@ function handleClearQuote(){
 }
 
 function handleSelectChange(){
-	
 	//create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
     $("#myList").change(function printDropdown(){
         quoteCount = $("#myList").val();
