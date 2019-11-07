@@ -21,11 +21,11 @@ function handleAJAX_JSON(){
         if (data.length > 0) {
            
            // iterate the number of times with the selected drop-down value
-           for (var i = 0; i < quoteCount.length; i++) {
+           //for (var i = 0; i < quoteCount.length; i++) {
 
            	generateQuote(data, data.length);
            	// quoteCount[i]
-           }
+           //}
         }
       },
       error: function () {
