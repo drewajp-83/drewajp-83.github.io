@@ -11,7 +11,6 @@ let whichQuote = true; // default for original quote else mixed quote
 function handleAJAX_JSON(){
 
     $.ajax({
-      // headers: { 'Access-Control-Allow-Origin': '*' },
       crossDomain: true,  
       dataType: "json",
       method: "GET",
