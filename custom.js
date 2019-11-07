@@ -4,7 +4,7 @@ let author = "";
 let fragmentedQuote = "";
 let dropdownValue = "";
 const textArea = $('.full-quote');
-var fileURL = "js/quotes_final.json";
+var fileURL = "quotes_final.json";
 var quoteCount = 0;
 var whichQuote = true; // default for original quote else mixed quote
 
