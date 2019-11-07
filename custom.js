@@ -43,9 +43,7 @@ function handleSelectChange(){
 	
 	//create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
     $("#myList").change(function printDropdown(){
-
         quoteCount = $("#myList").val();
-		document.getElementById("user-select").innerHTML = quoteCount;
      });
 }
 
@@ -69,18 +67,6 @@ function handleQuoteButtonsClick(){
 		}
 		
 	});
-
-	// $("#mixed-quote").on('click', function(){
-	// 	_this = $(this).data('clicked', true);
-	// 	if (_this) {
-	// 		alert('mixed quote is clicked')
-	// 		whichQuote = false;
-
-	// 		handleAJAX_JSON();
-
-	// 		return;
-	// 	}	
-	// });
 
 }
 
