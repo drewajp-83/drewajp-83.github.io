@@ -74,16 +74,16 @@ function generateQuote(json_data, json_len){
     fullQuote = json_data[quoteIndex].quote.fullQuote;
     author = json_data[quoteIndex].author;
     fragmentedQuote = beginningQuote + middleQuote + endQuote
-
-}
-
-function displayQuote(){
-     if (whichQuote == true) {
-    	textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
+	
+    //loop through with handleSelectChange value
+	
+    //output returned quotes
+    if (whichQuote == true) {
+        textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
     } else {
-    	textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
+        textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
     }
 }
-    displayQuote();
+
 
 
