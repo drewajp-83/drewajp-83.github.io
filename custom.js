@@ -87,7 +87,8 @@ function displayQuote(){
     } else {
     	textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
     }
-    displayQuote();
 }
+
+    displayQuote();
 
 
