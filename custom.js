@@ -78,17 +78,12 @@ function generateQuote(json_data, json_len){
 }
 
 function displayQuote(){
-     for(let i = 0; i < quoteCount; i++){
-     	generateQuote(i);
-    } 
-
      if (whichQuote == true) {
     	textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
     } else {
     	textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
     }
 }
-
     displayQuote();
 
 
