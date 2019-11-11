@@ -34,6 +34,7 @@ function handleSelectChange(){
     $("#myList").change(function printDropdown(){
         quoteCount = $("#myList").val();
 	  for(let j = 0; j < quoteCount; j++){
+	  handleQuoteButtonsClick(j);
 	  console.log(j);
          }
      });
