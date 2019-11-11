@@ -84,6 +84,10 @@ function generateQuote(json_data, json_len){
         textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
     }
 }
+for(let i = 0; i < quoteCount; i++){
+	generateQuote(i);
+	console.log(generateQuote());
+}
 
 
 
