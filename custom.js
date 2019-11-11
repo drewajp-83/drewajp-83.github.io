@@ -86,8 +86,8 @@ function generateQuote(json_data, json_len){
 }
 for(let i = 0; i < quoteCount; i++){
 	generateQuote(i);
-	console.log(generateQuote());
 }
+console.log(generateQuote());
 
 
 
