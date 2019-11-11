@@ -87,13 +87,11 @@ function generateQuote(json_data, json_len){
         textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
     }
 }
-let runQuery = function(){
-	for(let i = 0; i < quoteCount; i++){
-	return generateQuote[i];
-    }
-}
 
-console.log(runQuery);
+	  for(let j = 0; j < quoteCount; j++){
+	  console.log(j);
+         }
+
 
 
 
