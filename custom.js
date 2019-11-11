@@ -92,7 +92,7 @@ let runQuery = function(){
 
 console.log(runQuery);
 
-for(let j = 0; j < 5; j++){
+for(let j = 0; j < quoteCount; j++){
 	console.log(j);
 }
 
