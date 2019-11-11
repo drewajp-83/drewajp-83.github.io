@@ -73,14 +73,16 @@ function generateQuote(json_data, json_len){
     //declare quote options within global variables within functions
     fullQuote = json_data[quoteIndex].quote.fullQuote;
     author = json_data[quoteIndex].author;
-    fragmentedQuote = beginningQuote + middleQuote + endQuote;
+    fragmentedQuote = beginningQuote + middleQuote + endQuote
 
-    if (whichQuote == true) {
+}
+function displayQuote(){
+      if (whichQuote == true) {
     	textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
     } else {
     	textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
     }
-
+       return;
 }
      for(let i = 0; i < quoteCount; i++){
      	generateQuote();
