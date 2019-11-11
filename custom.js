@@ -86,7 +86,7 @@ function generateQuote(json_data, json_len){
 }
 let runQuery = function(){
 	for(let i = 0; i < quoteCount; i++){
-	return;
+	return generateQuote[i];
     }
 }
 
