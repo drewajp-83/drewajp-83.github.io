@@ -27,6 +27,7 @@ function handleAJAX_JSON(){
 
 function handleClearQuote(){
 	textArea.empty();
+	Program.restart();
 }
 
 function handleSelectChange(){
