@@ -35,7 +35,7 @@ function handleSelectChange(){
     $("#myList").change(function printDropdown(){
         quoteCount = $("#myList").val();
 	  if (quoteCount == 1){
-	  	handleQuoteButtonsClick();
+	  	return generateQuote();
 	  } else {
 	  //loop through quote button handler according to the users input
 	  for(let j = 0; j < quoteCount - 1; j++){
