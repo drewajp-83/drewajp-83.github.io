@@ -85,8 +85,6 @@ function generateQuote(json_data, json_len){
     author = json_data[quoteIndex].author;
     fragmentedQuote = beginningQuote + middleQuote + endQuote
 	
-    //loop through with handleSelectChange value
-	
     //output returned quotes
     if (whichQuote == true) {
         textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
