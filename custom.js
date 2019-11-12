@@ -34,8 +34,8 @@ function handleSelectChange(){
 	//create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
     $("#myList").change(function printDropdown(){
         quoteCount = $("#myList").val();
-	  if (quoteCount == 1){
-	  	return generateQuote();
+	  if (quoteCount == "1"){
+	  	return handleQuoteButtonsClick();
 	  } else {
 	  //loop through quote button handler according to the users input
 	  for(let j = 0; j < quoteCount - 1; j++){
