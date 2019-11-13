@@ -36,7 +36,7 @@ function handleSelectChange(){
         quoteCount = $("#myList").val();
 	  if (quoteCount == 1){
 	  for(let i = 0; i < 1; i++){
-	  	handleQuoteButtonsClick[i][0];
+	  	handleQuoteButtonsClick(i);
 	      }
 	  } else {
 	  //loop through quote button handler according to the users input
