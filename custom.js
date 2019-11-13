@@ -43,8 +43,8 @@ function handleSelectChange(){
 	  for(let j = 0; j < quoteCount - 1; j++){
 	  	handleQuoteButtonsClick(j);
 	  console.log(j);
-         }*/
-	}
+         }
+	}*/
      });
 }
 
