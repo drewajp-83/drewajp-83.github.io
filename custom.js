@@ -49,7 +49,7 @@ function handleSelectChange(){
 }
 
 function handleQuoteButtonsClick(){
-	if (quoteCount < 1){
+	if (quoteCount == 0){
 		alert('Please select the number of Quotes first!');
 		return;
 	}
