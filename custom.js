@@ -57,10 +57,12 @@ function handleQuoteButtonsClick(){
 	$("#original-quote, #mixed-quote").on('click', function(){
 		if (this.id == 'original-quote') {
 		      whichQuote = true;
-		      handleAJAX_JSON();
+		      //handleAJAX_JSON();
+		      generateQuote();	
 		} else if (this.id == 'mixed-quote') {
 		      whichQuote = false;
-		      handleAJAX_JSON();
+		      //handleAJAX_JSON();
+		      generateQuote();	
 		}
 	});
 
