@@ -87,12 +87,11 @@ function generateQuote(json_data, json_len){
     fragmentedQuote = beginningQuote + middleQuote + endQuote
 	
     //output returned quotes
-    let testPrint = if (whichQuote == true) {
-			textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
-		    } else {
-			textArea.append('<p>' + fragmentedQuote + '</p>');
-		    }
-    testPrint.hide();
+	if (whichQuote == true) {
+		textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
+	} else {
+		textArea.append('<p>' + fragmentedQuote + '</p>');
+	}
 }
 
 
