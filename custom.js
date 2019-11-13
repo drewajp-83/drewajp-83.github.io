@@ -34,7 +34,7 @@ function handleSelectChange(){
 	//create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
     $("#myList").change(function printDropdown(){
         quoteCount = $("#myList").val();
-	  if (quoteCount == 1){
+	  /*if (quoteCount == 1){
 	  for(let i = 0; i < 1; i++){
 	  	handleQuoteButtonsClick(i);
 	      }
@@ -43,7 +43,7 @@ function handleSelectChange(){
 	  for(let j = 0; j < quoteCount - 1; j++){
 	  	handleQuoteButtonsClick(j);
 	  console.log(j);
-         }
+         }*/
 	}
      });
 }
@@ -92,6 +92,11 @@ function generateQuote(json_data, json_len){
 	} else {
 		textArea.append('<p>' + fragmentedQuote + '</p>');
 	}
+}
+
+function quoteLoop(){
+     	for(let j = 0; j < quoteCount; j++){
+	generateQuote(j);
 }
 
 
