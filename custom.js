@@ -34,24 +34,29 @@ function handleSelectChange(){
 	//create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
     $("#myList").change(function printDropdown(){
         quoteCount = $("#myList").val();
-
+	  if (quoteCount == 1){
+	  	return handleQuoteButtonsClick();
+	  } else {
 	  //loop through quote button handler according to the users input
-	  for(let j = 0; j < quoteCount; j++){
-	  	handleQuoteButtonsClick(j);
+	  for(let j = 0; j < quoteCount - 1; j++){
+	  handleQuoteButtonsClick(j);
 	  console.log(j);
          }
+	}
+     });
 }
 
 function handleQuoteButtonsClick(){
-	if (quoteCount == 0){
+	if (quoteCount < 1){
 		alert('Please select the number of Quotes first!');
 		return;
 	}
+
 	textArea.empty();
 	$("#original-quote, #mixed-quote").on('click', function(){
 		if (this.id == 'original-quote') {
 		      whichQuote = true;
-		      handleAJAX_JSON();	
+		      handleAJAX_JSON();
 		} else if (this.id == 'mixed-quote') {
 		      whichQuote = false;
 		      handleAJAX_JSON();
@@ -80,13 +85,14 @@ function generateQuote(json_data, json_len){
     author = json_data[quoteIndex].author;
     fragmentedQuote = beginningQuote + middleQuote + endQuote
 	
-	textArea.empty()
+    //loop through with handleSelectChange value
+	
     //output returned quotes
-	if (whichQuote == true) {
-		textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
-	} else {
-		textArea.append('<p>' + fragmentedQuote + '</p>');
-	}
+    if (whichQuote == true) {
+        textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
+    } else {
+        textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
+    }
 }
 
 
