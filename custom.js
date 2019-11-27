@@ -52,7 +52,7 @@ function handleQuoteButtonsClick(){
 		return;
 	}
 
-	textArea.empty();
+	//textArea.empty();
 	$("#original-quote, #mixed-quote").on('click', function(){
 		if (this.id == 'original-quote') {
 		      whichQuote = true;
