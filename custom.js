@@ -51,8 +51,7 @@ function handleQuoteButtonsClick(){
 		alert('Please select the number of Quotes first!');
 		return;
 	}
-
-	//textArea.empty();
+	
 	$("#original-quote, #mixed-quote").on('click', function(){
 		if (this.id == 'original-quote') {
 		      whichQuote = true;
