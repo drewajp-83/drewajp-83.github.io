@@ -17,7 +17,7 @@ function init() {
     let author = "";
     let fragmentedQuote = "";
     let dropdownValue = "";
-    let quoteCount = 0;
+    //let quoteCount = 0;
     let whichQuote = true; // default for original quote else mixed quote
 }
 
