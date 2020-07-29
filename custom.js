@@ -49,6 +49,7 @@ function handleSelectChange() {
 }
 
 function handleQuoteButtonsClick() {
+    textArea.empty();
     if (quoteCount < 1) {
         alert('Please select the number of Quotes first!');
         return;
