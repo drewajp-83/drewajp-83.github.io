@@ -40,7 +40,30 @@ function handleSelectChange() {
     //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
     $("#myList").change(function printDropdown() {
         quoteCount = $("#myList").val();
+        //loop through quote button handler according to the users input
+        for (let i = 0; i < quoteCount; i++) {
+            handleQuoteButtonsClick(i);
+            console.log(i);
+        }
     });
+}
+
+function handleQuoteButtonsClick() {
+    if (quoteCount < 1) {
+        alert('Please select the number of Quotes first!');
+        return;
+    }
+
+    $("#original-quote, #mixed-quote").on('click', function() { //needs changing to toggle switch ids
+        if (this.id == 'original-quote') {
+            whichQuote = true;
+            handleAJAX_JSON();
+        } else if (this.id == 'mixed-quote') {
+            whichQuote = false;
+            handleAJAX_JSON();
+        }
+    });
+
 }
 
 function generateQuote(json_data, json_len) {
@@ -62,34 +85,11 @@ function generateQuote(json_data, json_len) {
     fullQuote = json_data[quoteIndex].quote.fullQuote;
     author = json_data[quoteIndex].author;
     fragmentedQuote = beginningQuote + middleQuote + endQuote
-    
-    handleQuoteDisplay();
-}
 
-function handleQuoteButtonsClick() {
-    if (quoteCount < 1) {
-        alert('Please select the number of Quotes first!');
-        return;
-    }
-
-    $("#original-quote, #mixed-quote").on('click', function() { //needs changing to toggle switch ids
-        if (this.id == 'original-quote') {
-            whichQuote = true;
-            generateQuote();
-        } else if (this.id == 'mixed-quote') {
-            whichQuote = false;
-            generateQuote();
-        }
-    });
-
-}
-
-function handleQuoteDisplay() {
-    for (let i = 0; i < quoteCount; i++) {
-        if (whichQuote == true) {
-            textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
-        } else {
-            textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
-        }
+    //output returned quotes
+    if (whichQuote == true) {
+        textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
+    } else {
+        textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
     }
 }
