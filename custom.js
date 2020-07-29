@@ -1,11 +1,11 @@
+init();
+
 /**
  * GLOBAL VARIABLES
  */
 let fullQuote, author, fragmentedQuote, dropdownValue, quoteCount, whichQuote;
 const textArea = $('.full-quote');
 const fileURL = "quotes_final.json";
-
-init();
 
 /**
  * Initialise and pass variable values upon page load
