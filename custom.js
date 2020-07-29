@@ -85,7 +85,6 @@ function handleQuoteButtonsClick() {
 }
 
 function handleQuoteDisplay() {
-    textArea.html('');
     for (let i = 0; i < quoteCount; i++) {
         if (whichQuote == true) {
             textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
