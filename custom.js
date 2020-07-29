@@ -14,7 +14,7 @@ const quoteToggle = $('#quote-toggle');
 /**
  * Initialise and pass variable values upon page load
  */
-window.init() => {
+window.init=()=> {
     let fullQuote = "";
     let author = "";
     let fragmentedQuote = "";
