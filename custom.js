@@ -41,15 +41,14 @@ function handleSelectChange() {
     $("#myList").change(function printDropdown() {
         quoteCount = $("#myList").val();
         //loop through quote button handler according to the users input
-        //for (let i = 0; i < quoteCount; i++) {
-          //  handleQuoteButtonsClick(i);
-            //console.log(i);
-        //}
+        for (let i = 0; i < quoteCount; i++) {
+            handleQuoteButtonsClick(i);
+            console.log(i);
+        }
     });
 }
 
 function handleQuoteButtonsClick() {
-    textArea.empty();
     if (quoteCount < 1) {
         alert('Please select the number of Quotes first!');
         return;
@@ -94,7 +93,3 @@ function generateQuote(json_data, json_len) {
         textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
     }
 }
-
-function handleClearQuote() {
-    textArea.empty();
-{
