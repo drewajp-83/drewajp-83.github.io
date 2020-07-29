@@ -94,3 +94,7 @@ function generateQuote(json_data, json_len) {
         textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
     }
 }
+
+function handleClearQuote() {
+    textArea.empty();
+{
