@@ -88,7 +88,6 @@ function generateQuote(json_data, json_len) {
 
     //output returned quotes
     for (let i = 0; i < quoteCount; i++) {
-            handleQuoteButtonsClick(i);
     if (whichQuote == true) {
         textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
     } else {
