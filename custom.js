@@ -62,6 +62,8 @@ function generateQuote(json_data, json_len) {
     fullQuote = json_data[quoteIndex].quote.fullQuote;
     author = json_data[quoteIndex].author;
     fragmentedQuote = beginningQuote + middleQuote + endQuote
+    
+    handleQuoteDisplay();
 }
 
 function handleQuoteButtonsClick() {
@@ -73,12 +75,10 @@ function handleQuoteButtonsClick() {
     $("#original-quote, #mixed-quote").on('click', function() { //needs changing to toggle switch ids
         if (this.id == 'original-quote') {
             whichQuote = true;
-            handleAJAX_JSON();
-            handleQuoteDisplay();
+            generateQuote();
         } else if (this.id == 'mixed-quote') {
             whichQuote = false;
-            handleAJAX_JSON();
-            handleQuoteDisplay();
+            generateQuote();
         }
     });
 
