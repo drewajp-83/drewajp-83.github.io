@@ -4,7 +4,7 @@
  */
 let fullQuote, author, fragmentedQuote, dropdownValue, quoteCount, whichQuote;
 
-const textArea = $('.full-quote');
+const textArea = $('#quote-body');
 const fileURL = "quotes_final.json";
 
 //init();
@@ -38,8 +38,8 @@ function handleAJAX_JSON() {
 
 }
 
-    $("#myList").change(function printDropdown() {
-        quoteCount = $("#myList").val();    
+    $("#select-list").change(function printDropdown() {
+        quoteCount = $("#select-list").val();    
         console.log(quoteCount);
                 
         //loop through quote button handler according to the users input
