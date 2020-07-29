@@ -44,6 +44,7 @@ function handleAJAX_JSON() {
             for (let i = 0; i < quoteCount; i++) {
             handleQuoteButtonsClick(i);
             console.log(i);
+         }
     });
 
 function handleQuoteButtonsClick() {
