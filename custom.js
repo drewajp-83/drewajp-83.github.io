@@ -36,7 +36,7 @@ function handleAJAX_JSON() {
 
 }
 
-/*function handleSelectChange() {
+function handleSelectChange() {
     //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
     $("#myList").change(function printDropdown() {
         quoteCount = $("#myList").val();
@@ -46,18 +46,6 @@ function handleAJAX_JSON() {
             console.log(i);
         }
     });
-}*/
-
-function handleSelectChange() {
-    //get the amount of quotes selected from the drop-down list items
-    let selectionBox = document.getElementById("myList");
-
-    let selectedItem = selectionBox.options[selectionBox.selectedIndex].value;
-    quoteCount = parseInt(selectedItem);
-    for (let i = 0; i < quoteCount; i++) {
-        handleQuoteButtonsClick(i);
-        //console.log(i);
-    }
 }
 
 function handleQuoteButtonsClick() {
