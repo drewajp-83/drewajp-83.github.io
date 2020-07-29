@@ -8,7 +8,7 @@ const textArea = $('#quote-body');
 const fileURL = "quotes_final.json";
 const quoteToggle = $('#quote-toggle');
 
-console.log(quoteToggle.checked);
+//console.log(quoteToggle.checked);
 
 //init();
 
