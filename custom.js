@@ -107,7 +107,7 @@ const quoteToggle = $('#quote-toggle');
 /**
  * Initialise and pass variable values upon page load
  */
-function init() {
+window.init() => {
     let fullQuote = "";
     let author = "";
     let fragmentedQuote = "";
