@@ -4,8 +4,6 @@
  */
 let fullQuote, author, fragmentedQuote, dropdownValue, quoteCount, whichQuote;
 
-init();
-
 const textArea = $('.full-quote');
 const fileURL = "quotes_final.json";
 
@@ -17,7 +15,7 @@ function init() {
     let author = "";
     let fragmentedQuote = "";
     let dropdownValue = "";
-    //let quoteCount = 0;
+    let quoteCount = 0;
     let whichQuote = true; // default for original quote else mixed quote
 }
 
