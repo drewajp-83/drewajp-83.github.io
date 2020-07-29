@@ -36,17 +36,20 @@ function handleAJAX_JSON() {
 
 }
 
-function handleSelectChange() {
+//function handleSelectChange() {
     //create dropdown for 1 - 5 quote selection to generate <li> attributes and loop through on number input
+    //$("#myList").change(function printDropdown() {
+      //  quoteCount = $("#myList").val();
+        //loop through quote button handler according to the users input
+    
+        //for (let i = 0; i < quoteCount; i++) {
+            //handleQuoteButtonsClick(i);
+            //console.log(i);
+        //}
+    //});
+//}
     $("#myList").change(function printDropdown() {
         quoteCount = $("#myList").val();
-        //loop through quote button handler according to the users input
-        for (let i = 0; i < quoteCount; i++) {
-            handleQuoteButtonsClick(i);
-            console.log(i);
-        }
-    });
-}
 
 function handleQuoteButtonsClick() {
     if (quoteCount < 1) {
