@@ -50,7 +50,7 @@ function handleAJAX_JSON() {
     });
 
 function handleQuoteButtonsClick() {
-    if (quoteCount < 1 || undefined) {
+    if (quoteCount == undefined || < 1) {
         alert('Please select the number of Quotes first!');
         return;
     }
