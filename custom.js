@@ -67,6 +67,7 @@ function handleQuoteButtonsClick() {
     }
 
     $("#original-quote, #mixed-quote").on('click', function() { //needs changing to toggle switch ids
+        textArea.html('');
         if (this.id == 'original-quote') {
             whichQuote = true;
             handleAJAX_JSON();
