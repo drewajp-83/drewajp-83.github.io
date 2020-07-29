@@ -6,6 +6,7 @@ let fullQuote, author, fragmentedQuote, dropdownValue, quoteCount, whichQuote;
 
 const textArea = $('#quote-body');
 const fileURL = "quotes_final.json";
+const quoteToggle = $('#quote-toggle');
 
 //init();
 
