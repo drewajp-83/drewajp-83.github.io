@@ -145,7 +145,7 @@ function handleAJAX_JSON() {
     });
 
 function handleQuoteButtonsClick() {
-    if (quoteCount <= 0) {
+    if (quoteCount <= 0 || typeof === 'undefined') {
         alert('Please select the number of Quotes first!');
         return;
     }
