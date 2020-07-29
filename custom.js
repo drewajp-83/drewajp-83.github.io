@@ -2,7 +2,8 @@
  * GLOBAL VARIABLES
  */
 let fullQuote, author, fragmentedQuote, dropdownValue, quoteCount, whichQuote;
-const textArea, fileURL;
+const textArea = $('.full-quote');
+const fileURL = "quotes_final.json";
 
 init();
 
@@ -16,8 +17,6 @@ function init() {
     let dropdownValue = "";
     let quoteCount = 0;
     let whichQuote = true; // default for original quote else mixed quote
-    const textArea = $('.full-quote');
-    const fileURL = "quotes_final.json";
 }
 
 function handleAJAX_JSON() {
