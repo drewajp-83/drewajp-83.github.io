@@ -1,0 +1,163 @@
+/* header {
+    background-image: url("header-background.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+} */
+
+body {
+    background-image: url("header-background.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #f7a000;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+
+ul li a:hover {
+    background-color: #fff;
+    color: #f7a000;
+    text-decoration: none;
+}
+
+ul li.active a {
+    background-color: #fff;
+    color: #f7a000;
+}
+
+.logo img {
+    float: left;
+    width: 150px;
+    height: 50px;
+}
+
+.main {
+    max-width: 90%;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#title {
+    /* width: 900px; */
+    margin: 50px auto;
+    padding: 20px;
+    /* width: 50%; */
+}
+
+#title h2 {
+    text-align: center;
+    color: #045;
+}
+
+#quote-header {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+#quote-footer {
+    margin-top: -10px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#quotetitle {
+    min-width: 100%;
+    background: #fff;
+    /* rgba(255, 255, 255, 0.6);*/
+    opacity: 0.5;
+    padding: 10px;
+    margin: 30px auto;
+    text-align: center;
+    min-height: 150px;
+}
+
+#buttontitle {
+    width: 100%;
+    text-align: center;
+}
+
+#quoteButton {
+    width: 200px;
+    height: 50px;
+    border: 2px solid #f7a000;
+    font-family: inherit;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #f7a000;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#quoteButton:hover {
+    cursor: pointer;
+    background: #000000;
+    color: #f7a000;
+}
+
+#quoteButton:active {
+    cursor: pointer;
+}
+
+#quoteButton {
+    display: inline-block;
+}
+
+#quoteGenius {
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media screen and(max-width:760px) {
+    #quoteButton,
+    #addNew {
+        display: block;
+    }
+}
+
+select {
+    width: 100%;
+    /* margin-top: 10px; */
+    border: 2px solid #f7a000;
+    color: #000;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 16;
+    padding: 5px;
+    border-radius: 5px;
+    height: 50px;
+}.row .col-sm #clear {
+}
