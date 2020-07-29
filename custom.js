@@ -49,7 +49,9 @@ function handleAJAX_JSON() {
     //});
 //}
     $("#myList").change(function printDropdown() {
-        quoteCount = $("#myList").val();
+        quoteCount = $("#myList").val();    
+        console.log(quoteCount);
+    });
 
 function handleQuoteButtonsClick() {
     if (quoteCount < 1) {
