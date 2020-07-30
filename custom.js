@@ -51,10 +51,10 @@ function handleQuoteButtonsClick() {
     }
 
     $("#quoteButton").on('click', function() { //needs changing to toggle switch ids
-        if (this.id == 'original-quote') {
+        if (quoteToggle.checked) {
             whichQuote = true;
             handleAJAX_JSON();
-        } else if (this.id == 'mixed-quote') {
+        } else {
             whichQuote = false;
             handleAJAX_JSON();
         }
