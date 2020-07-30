@@ -1,27 +1,20 @@
 /**
  * GLOBAL VARIABLES
  */
-let fullQuote, author, fragmentedQuote, dropdownValue, quoteCount, whichQuote;
+//let fullQuote, author, fragmentedQuote, dropdownValue, quoteCount, whichQuote;
 
 const textArea = $('#quote-body');
 const fileURL = "quotes_final.json";
 const quoteToggle = $('#quote-toggle');
 
-//console.log(quoteToggle.checked);
 
-//init();
+let fullQuote = "";
+let author = "";
+let fragmentedQuote = "";
+let dropdownValue = "";
+let quoteCount = 0;
+let whichQuote = true; // default for original quote else mixed quote
 
-/**
- * Initialise and pass variable values upon page load
- */
-window.init=()=> {
-    let fullQuote = "";
-    let author = "";
-    let fragmentedQuote = "";
-    let dropdownValue = "";
-    let quoteCount = 0;
-    let whichQuote = true; // default for original quote else mixed quote
-}
 
 function handleAJAX_JSON() {
 
@@ -40,19 +33,19 @@ function handleAJAX_JSON() {
 
 }
 
-    $("#select-list").change(function printDropdown() {
-        quoteCount = $("#select-list").val();    
-        //console.log(quoteCount);
-                
-        //loop through quote button handler according to the users input
-            for (let i = 0; i < quoteCount; i++) {
-            handleQuoteButtonsClick(i);
-            console.log(i);
-         }
-    });
+$("#select-list").change(function printDropdown() {
+    quoteCount = $("#select-list").val();
+    console.log(quoteCount);
+
+    //loop through quote button handler according to the users input
+    for (let i = 0; i < quoteCount; i++) {
+        handleQuoteButtonsClick(i);
+        console.log(i);
+    }
+});
 
 function handleQuoteButtonsClick() {
-    if (quoteCount <= 0 || typeof === 'undefined') {
+    if (quoteCount <= 0 || typeof quoteCount === 'undefined') {
         alert('Please select the number of Quotes first!');
         return;
     }
