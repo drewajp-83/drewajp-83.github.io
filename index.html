@@ -7,7 +7,7 @@
     <title>Quote Generator</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="quote_gen.css" rel="stylesheet" type="text/css">
-    <link href="quote_style.css" rel="stylesheet" type="text/css">
+    <link href="quote-style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu" rel="stylesheet">
 
 
@@ -59,19 +59,22 @@
             </div>
 
             <div class="col-sm">
+                <ul>
+                    <li>
+                        <label for="original_quote">Original Quote</label>
+                        <input type="radio" name="selector" class="radios" id="original_quote" value="original">
+                    </li>
+                    <li>
+                        <label for="mixed_quote">Mixed Quote</label>
+                        <input type="radio" name="selector" class="radios" id="mixed_quote" value="original">
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm">
                 <!-- Generate Quote button -->
                 <button style="width: 100%;" id="quoteButton" type="button" class="btn btn-primary" onclick="handleQuoteButtonsClick()">Generate Quote</button>
             </div>
-            <div class="col-sm" align="center">
-                <!-- Clear button -->
-                <button style="width: 100%;" type="button" id="clear" class="btn btn-secondary" onclick="handleClearQuote();">Clear</button>
-            </div>
-            <div class="col-sm" align="center">
-                <!-- Rounded switch -->
-                <label class="switch">
-								  <input type="checkbox" id="quote-toggle">
-								  <span class="slider round"></span></label>
-            </div>
+
 
 
         </div>
@@ -94,7 +97,7 @@
 
             //keep text area empty on page load
             textArea.empty();
-	    //init();	
+            //init();	
 
             //loop through json function and return dropdown value selection
         }); //end document ready
