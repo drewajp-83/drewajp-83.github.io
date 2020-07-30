@@ -46,11 +46,11 @@ $("#select-list").change(function printDropdown() {
 
 function handleQuoteButtonsClick() {
     if (quoteCount <= 0 || typeof quoteCount === 'undefined') {
-        alert('Please select the number of Quotes first!');
+        alert('Please select the number of quotes from the dropdown box');
         return;
     }
 
-    $("#original-quote, #mixed-quote").on('click', function() { //needs changing to toggle switch ids
+    $("#quoteButton").on('click', function() { //needs changing to toggle switch ids
         if (this.id == 'original-quote') {
             whichQuote = true;
             handleAJAX_JSON();
