@@ -51,12 +51,14 @@ function handleQuoteButtonsClick() {
     }
 
     $("#quoteButton").on('click', function() { //needs changing to toggle switch ids
-        if (quoteToggle.checked) {
+        if (document.getElementById('original_quote').checked) {
             whichQuote = true;
             handleAJAX_JSON();
-        } else {
+            console.log('Original Quote');
+        } else if (document.getElementById('mixed_quote').checked) {
             whichQuote = false;
             handleAJAX_JSON();
+            console.log('Mixed Quote');
         }
     });
 
