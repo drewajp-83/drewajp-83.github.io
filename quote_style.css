@@ -135,6 +135,14 @@ ul li.active a {
     text-align: center;
 }
 
+#quoteBody ul li {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    color: #000;
+}
+
 
 /*MEDIA QUERIES*/
 
