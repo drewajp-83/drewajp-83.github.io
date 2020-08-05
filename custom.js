@@ -37,10 +37,10 @@ $("#select-list").change(function printDropdown() {
    // console.log(quoteCount);
 
     //loop through quote button handler according to the users input
-    /*for (let i = 0; i < quoteCount; i++) {
+    for (let i = 0; i < quoteCount; i++) {
         handleQuoteButtonsClick(i);
         console.log(i);
-    }*/
+    }
 });
 
 function handleQuoteButtonsClick() {
@@ -82,12 +82,10 @@ function generateQuote(json_data, json_len) {
     author = json_data[quoteIndex].author;
     fragmentedQuote = beginningQuote + middleQuote + endQuote
 
-    for (let i = 0; i < quoteCount; i++) {
     //output returned quotes
     if (whichQuote == true) {
         textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
     } else {
         textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
     }
-  }
 }
