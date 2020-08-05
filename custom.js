@@ -85,7 +85,7 @@ function generateQuote(json_data, json_len) {
 
     //output returned quotes
     if (whichQuote == true) {
-        textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
+        textArea.append('<ul><li>"' + fullQuote + '</li><li>' + author + '"</li></ul>');
     } else {
         textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
     }
