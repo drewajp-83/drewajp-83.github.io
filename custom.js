@@ -37,10 +37,10 @@ $("#select-list").change(function printDropdown() {
     // console.log(quoteCount);
 
     //loop through quote button handler according to the users input
-    for (let i = 0; i < quoteCount; i++) {
+    /*for (let i = 0; i < quoteCount; i++) {
         handleQuoteButtonsClick(i);
         console.log(i);
-    }
+    }*/
 });
 
 function handleQuoteButtonsClick() {
@@ -50,17 +50,18 @@ function handleQuoteButtonsClick() {
         alert('Please select the number of quotes from the dropdown box');
         return;
     }
-    $("#quoteButton").on('click', function() { //needs changing to toggle switch ids
+    //$("#quoteButton").on('click', function() { //needs changing to toggle switch ids
         if (document.getElementById('original_quote').checked) {
             whichQuote = true;
             handleAJAX_JSON();
+            //generateQuote();
             console.log('Original Quote');
         } else if (document.getElementById('mixed_quote').checked) {
             whichQuote = false;
             handleAJAX_JSON();
             console.log('Mixed Quote');
         }
-    });
+    //});
 }
 
 function generateQuote(json_data, json_len) {
