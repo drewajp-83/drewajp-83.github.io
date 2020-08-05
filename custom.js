@@ -23,7 +23,8 @@ function handleAJAX_JSON() {
         method: "GET",
         url: fileURL,
         success: function(data) {
-            generateQuote(data, data.length); //the data call is pushed into the generateQuote parameters to handle the dot notation logic
+            for (let i = 0; i < quoteCount; i++)
+            {generateQuote(data, data.length);} //the data call is pushed into the generateQuote parameters to handle the dot notation logic
         },
         error: function() {
             console.log('there is an error reading parsing the json file');
@@ -86,7 +87,7 @@ function generateQuote(json_data, json_len) {
 
     //textArea.empty();
     
-    //output returned quotes
+    //output returned quote
     if (whichQuote == true) {
         textArea.append('<ul><li>"' + fullQuote + '</li><li>' + author + '"</li></ul>');
     } else {
