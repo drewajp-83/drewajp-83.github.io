@@ -54,10 +54,12 @@ function handleQuoteButtonsClick() {
             whichQuote = true;
             handleAJAX_JSON();
             console.log('Original Quote');
+            textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
         } else if (document.getElementById('mixed_quote').checked) {
             whichQuote = false;
             handleAJAX_JSON();
             console.log('Mixed Quote');
+            textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
         }
     });
 }
@@ -83,9 +85,9 @@ function generateQuote(json_data, json_len) {
     fragmentedQuote = beginningQuote + middleQuote + endQuote
 
     //output returned quotes
-    if (whichQuote == true) {
+    /*if (whichQuote == true) {
         textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
     } else {
         textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
-    }
+    }*/
 }
