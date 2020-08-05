@@ -49,7 +49,6 @@ function handleQuoteButtonsClick() {
         alert('Please select the number of quotes from the dropdown box');
         return;
     }
-    for(let i = 0; i < quoteCount; i++){
     $("#quoteButton").on('click', function() { //needs changing to toggle switch ids
         if (document.getElementById('original_quote').checked) {
             whichQuote = true;
@@ -61,7 +60,6 @@ function handleQuoteButtonsClick() {
             console.log('Mixed Quote');
         }
     });
-  }
 }
 
 function generateQuote(json_data, json_len) {
@@ -84,10 +82,12 @@ function generateQuote(json_data, json_len) {
     author = json_data[quoteIndex].author;
     fragmentedQuote = beginningQuote + middleQuote + endQuote
 
+    for (let i = 0; i < quoteCount; i++) {
     //output returned quotes
     if (whichQuote == true) {
         textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
     } else {
         textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
     }
+  }
 }
