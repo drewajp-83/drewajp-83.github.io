@@ -37,10 +37,10 @@ $("#select-list").change(function printDropdown() {
    // console.log(quoteCount);
 
     //loop through quote button handler according to the users input
-    for (let i = 0; i < quoteCount; i++) {
+    /*for (let i = 0; i < quoteCount; i++) {
         handleQuoteButtonsClick(i);
         console.log(i);
-    }
+    }*/
 });
 
 function handleQuoteButtonsClick() {
@@ -58,6 +58,13 @@ function handleQuoteButtonsClick() {
             whichQuote = false;
             handleAJAX_JSON();
             console.log('Mixed Quote');
+        }
+            for (let i = 0; i < quoteCount; i++) {
+                if (whichQuote == true) {
+                    textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
+                } else {
+                    textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
+                }
         }
     });
 }
@@ -83,9 +90,9 @@ function generateQuote(json_data, json_len) {
     fragmentedQuote = beginningQuote + middleQuote + endQuote
 
     //output returned quotes
-    if (whichQuote == true) {
+    /*if (whichQuote == true) {
         textArea.append('<ul><li>' + fullQuote + '</li><li>' + author + '</li></ul>');
     } else {
         textArea.append('<ul><li>' + fragmentedQuote + '</li></ul>');
-    }
+    }*/
 }
