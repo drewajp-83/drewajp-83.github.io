@@ -1,7 +1,6 @@
 /**
  * GLOBAL VARIABLES
  */
-//let fullQuote, author, fragmentedQuote, dropdownValue, quoteCount, whichQuote;
 
 const textArea = $('#quote-body');
 const fileURL = "quotes_final.json";
@@ -35,13 +34,6 @@ function handleAJAX_JSON() {
 
 $("#select-list").change(function printDropdown() {
     quoteCount = parseInt($("#select-list").val());
-    // console.log(quoteCount);
-
-    //loop through quote button handler according to the users input
-    /*for (let i = 0; i < quoteCount; i++) {
-        handleQuoteButtonsClick(i);
-        console.log(i);
-    }*/
 });
 
 function handleQuoteButtonsClick() {
@@ -51,7 +43,6 @@ function handleQuoteButtonsClick() {
         alert('Please select the number of quotes from the dropdown box');
         return;
     }
-    //$("#quoteButton").on('click', function() { //needs changing to toggle switch ids
         if (document.getElementById('original_quote').checked) {
             whichQuote = true;
             handleAJAX_JSON();
@@ -62,7 +53,6 @@ function handleQuoteButtonsClick() {
             handleAJAX_JSON();
             console.log('Mixed Quote');
         }
-    //});
 }
 
 function generateQuote(json_data, json_len) {
@@ -84,8 +74,6 @@ function generateQuote(json_data, json_len) {
     fullQuote = json_data[quoteIndex].quote.fullQuote;
     author = json_data[quoteIndex].author;
     fragmentedQuote = beginningQuote + middleQuote + endQuote
-
-    //textArea.empty();
     
     //output returned quote
     if (whichQuote == true) {
