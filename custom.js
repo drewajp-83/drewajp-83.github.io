@@ -33,7 +33,7 @@ function handleAJAX_JSON() {
 }
 
 $("#select-list").change(function printDropdown() {
-    quoteCount = $("#select-list").val();
+    quoteCount = parseInt($("#select-list").val());
     // console.log(quoteCount);
 
     //loop through quote button handler according to the users input
