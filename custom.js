@@ -45,6 +45,7 @@ $("#select-list").change(function printDropdown() {
 
 function handleQuoteButtonsClick() {
     textArea.html('');
+    console.log(typeof quoteCount);
     if (quoteCount <= 0 || typeof quoteCount === 'undefined') {
         alert('Please select the number of quotes from the dropdown box');
         return;
