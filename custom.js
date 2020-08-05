@@ -84,7 +84,7 @@ function generateQuote(json_data, json_len) {
     author = json_data[quoteIndex].author;
     fragmentedQuote = beginningQuote + middleQuote + endQuote
 
-    textArea.empty();
+    //textArea.empty();
     
     //output returned quotes
     if (whichQuote == true) {
