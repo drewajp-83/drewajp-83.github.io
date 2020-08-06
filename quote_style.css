@@ -143,6 +143,14 @@ ul li.active a {
     color: #000;
 }
 
+.btn-secondary {
+    height: 50px;
+}
+
+.col-sm {
+    padding: 5px;
+}
+
 
 /*MEDIA QUERIES*/
 
