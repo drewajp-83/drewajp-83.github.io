@@ -5,6 +5,15 @@ body {
     background-position: center;
 }
 
+h1 {
+    color: white;
+    display: block;
+    width: 400px;
+    margin: 50px auto;
+    font: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 ul {
     float: center;
     list-style-type: none;
